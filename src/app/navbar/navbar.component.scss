@@ -1,0 +1,121 @@
+@import "/src/assets/variables";
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 1rem 3rem;
+
+    .navbar-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        width: 50vw;
+        padding-right: 2rem;
+        padding-bottom: 1rem;
+
+        border-right: 1px solid $color-very-light-gray;
+        border-bottom: 1px solid $color-very-light-gray;
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                text-decoration: none;
+                text-transform: uppercase;
+
+                line-height: $line-height-tight;
+                font-size: $font-size-h3;
+                color: $color-black;
+                font-family: $font-secondary;
+            }
+        }
+
+        .navbar-search {
+            max-width: 440px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .navbar-input {
+                width: 440px;
+                padding: 0.5rem;
+                border: none;
+                font-size: $font-size-body1;
+                font-family: $font-primary;
+
+                text-align: right;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .search-icon {
+                background-image: url("/assets/icons/search.svg");
+                background-repeat: no-repeat;
+                background-position: right;
+                transition: background 0.3s ease-in-out;
+                border: none;
+
+                &:focus,
+                &.has-input {
+                    background-image: none;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .navbar-links {
+        display: flex;
+        justify-content: space-between;
+        width: 50vw;
+        align-items: center;
+
+        padding-left: 10rem;
+        padding-bottom: 0.6rem;
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-black;
+
+            font-family: $font-primary;
+            line-height: $line-height-normal;
+            font-weight: $font-weight-bold;
+
+            font-size: $font-size-base;
+        }
+
+        .connect-wallet {
+            background: none;
+            color: $color-black;
+            padding: 0.5rem 2.2rem;
+            border-radius: 5px;
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .menu {
+            background: none;
+            border: none;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

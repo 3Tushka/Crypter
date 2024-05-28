@@ -1,0 +1,66 @@
+// variables
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+// Grayscale colors
+$color-black: #000000;
+$color-dark-gray: #202025;
+$color-gray: #555555;
+$color-light-gray: #686a6c;
+$color-very-light-gray: #e1e2e2;
+$color-white: #ffffff;
+
+// Colored accents
+$color-blue: #1966f7; // Example Hex Code
+$color-purple: #b9a9fb; // Example Hex Code
+$color-pink: #ffa6d6; // Example Hex Code
+$color-yellow: #dbff73; // Example Hex Code
+$color-light-blue: #bce6ec; // Example Hex Code
+$color-turquoise: #6dd3c2; // Example Hex Code
+
+// Font families (assuming a generic setup - replace with actual fonts used)
+$font-primary: "Helvetica", sans-serif;
+$font-secondary: "Arial", sans-serif;
+$font-inter: "Inter", sans-serif;
+
+$font-size-h1: 36px;
+$font-size-h2: 30px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+$font-size-body1: 16px;
+$font-size-body2: 14px;
+$font-size-title: 20px;
+$font-size-base: 12px;
+$font-size-caption: 10px;
+
+$font-weight-normal: 400; // Normal weight
+$font-weight-bold: 700; // Bold weight
+
+$line-height-tight: 19.2px;
+$line-height-normal: 24px;
+$line-height-loose: 28.8px;
+
+// You can combine properties into mixins or extendable classes if frequently reused
+%body-text {
+    font-family: $font-primary;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-normal;
+}
+
+// Example usage in a class
+.h1 {
+    @extend %body-text;
+    font-size: $font-size-h1;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+}
+
+.h2 {
+    @extend %body-text;
+    font-size: $font-size-h2;
+}
+
+.button {
+    font-family: $font-secondary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+}

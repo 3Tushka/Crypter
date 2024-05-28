@@ -1,0 +1,25 @@
+<nav class="navbar">
+  <div class="navbar-info">
+    <div class="navbar-brand">
+      <a routerLink="/">
+        <img [src]="'assets/icons/logo.svg'" alt="Crypter Logo" />
+        <span class="navbar-brand__title">Crypter</span>
+      </a>
+    </div>
+    <div class="navbar-search">
+      <input
+        type="text"
+        class="navbar-input search-icon"
+        (input)="checkInput($event)"
+      />
+    </div>
+  </div>
+  <div class="navbar-links">
+    <a routerLink="/discover">Discover</a>
+    <a routerLink="/feed">Feed</a>
+    <button class="connect-wallet button">Connect Wallet</button>
+    <button class="menu button">
+      <img [src]="'assets/icons/menu.svg'" alt="Menu" />
+    </button>
+  </div>
+</nav>
