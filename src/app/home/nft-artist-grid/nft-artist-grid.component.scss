@@ -1,0 +1,191 @@
+@import "../../../assets/_variables.scss";
+
+$nft-max-width: 50vw;
+$card-max-width: 400px;
+$card-border: 1px solid #e0e0e0;
+$card-padding: 32px;
+$card-radius: 8px;
+$card-bg-color: white;
+$grid-bg-color: aqua;
+
+.nft {
+    display: flex;
+    flex-direction: row;
+
+    &-info {
+        margin: 0 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 50%;
+
+        &-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            h1 {
+                font-size: 80px;
+                font-family: $font-inter;
+                font-weight: $font-weight-bold;
+                color: $color-black;
+            }
+        }
+
+        &-content {
+            max-width: 504px;
+            font-size: $font-size-body1;
+            font-family: $font-inter;
+            line-height: $line-height-normal;
+            color: $color-dark-gray;
+        }
+
+        .nft-artist-more {
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border: none;
+            border-radius: 30px;
+            padding: 1.3rem;
+            position: relative;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            cursor: pointer;
+            transition: 0.2s ease-out;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg); // Combine the translate and rotate transformations
+                border: solid black;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 3px;
+            }
+
+            &:hover {
+                background-color: $color-very-light-gray;
+            }
+        }
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-template-rows: repeat(3, 400px);
+        justify-items: center; // Horizontally center the items
+        align-items: center; // Vertically center the items
+    }
+}
+
+.user-card {
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    border: $card-border;
+    border-right: none;
+    background-color: $color-very-light-gray;
+    border-color: $color-dark-white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+
+    transition: 0.2s ease-in-out;
+
+    cursor: pointer;
+
+    &-rank {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+
+        width: 40px; // Width of the hexagon
+        height: 40px; // Height of the hexagon
+        background-color: $color-white; // Background color of the hexagon
+        color: black; // Text color
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+        // Optional: Adding some interactive effect
+        transition: transform 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+        border-radius: 10px;
+
+        font-size: $font-size-body2; // Adjust size accordingly
+        font-weight: bold; // Bold text
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .user-figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            h2 {
+                font-size: $font-size-h2;
+                font-family: $font-inter;
+                font-weight: $font-weight-bold;
+                color: $color-black;
+            }
+
+            .price {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 0.5rem;
+                p {
+                    font-size: $font-size-body1;
+                    font-family: $font-inter;
+                    color: $color-gray;
+                }
+
+                strong {
+                    font-size: $font-size-body1;
+                    font-family: $font-inter;
+                    color: $color-black;
+                    font-weight: $font-weight-bold;
+                }
+            }
+        }
+    }
+
+    .user-figure-image {
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid $color-white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            transition: 0.2s ease-in-out;
+        }
+    }
+}
+
+.user-card:hover {
+    background-color: $color-white;
+
+    .user-figure-image {
+        img {
+            border: 20px solid $color-very-light-gray;
+        }
+    }
+    .user-card-rank {
+        color: $color-white;
+        background-color: $color-black;
+        transform: rotate(360deg);
+    }
+}

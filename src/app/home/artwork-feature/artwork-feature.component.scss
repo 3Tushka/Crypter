@@ -1,0 +1,168 @@
+@import "src/assets/variables.scss";
+
+.artwork-feature {
+    margin: 64px 0;
+
+    width: 100%;
+    max-height: 800px;
+
+    .collection {
+        display: flex;
+        flex-direction: row;
+        max-height: 800px;
+
+        .collection-image {
+            width: 800px;
+            max-height: 800px;
+
+            position: relative;
+
+            img {
+                width: 100%;
+                max-height: 800px;
+                object-fit: contain;
+            }
+        }
+
+        .collection-box {
+            background-color: $color-very-light-gray;
+            width: 100%;
+
+            padding: 0 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .collection-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            max-width: 640px;
+            height: 92px;
+            margin: 4rem 0;
+            padding: 1rem 1.5rem;
+
+            background-color: $color-white;
+            border-radius: 1.875rem;
+
+            &__title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 0.5rem;
+
+                img {
+                    width: 18px;
+                    height: 18px;
+                    object-fit: cover;
+                }
+
+                h4 {
+                    font-family: $font-inter;
+                    font-size: $font-size-body1;
+                    font-weight: $font-weight-bold;
+                    line-height: $line-height-normal;
+                    color: $color-light-gray;
+                }
+
+                p {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.6rem;
+
+                    font-family: $font-inter;
+                    font-size: $font-size-h4;
+                    font-weight: $font-weight-bold;
+                    line-height: $line-height-normal;
+                    color: $color-black;
+                }
+            }
+        }
+    }
+}
+
+.pagination-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: $color-very-light-gray;
+    position: absolute;
+
+    width: 8px;
+    margin: 10% 10px;
+}
+
+.pagination-bar div {
+    border-radius: 8px;
+    width: 8px;
+    height: 160px;
+    background-color: $color-very-light-gray;
+    transition: height 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.pagination-bar .active {
+    background-color: #333;
+    height: calc((1 / totalSlides) * 100%);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.collection-controll-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    margin-bottom: 5rem;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-size: 80px;
+            font-weight: $font-weight-bold;
+            font-family: $font-inter;
+            color: $color-black;
+        }
+    }
+
+    .controll-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .button-feature {
+            width: 45%;
+
+            padding: 1rem 2rem;
+            background: none;
+            border: 2px solid $color-black;
+
+            font-size: $font-size-body1;
+            font-weight: $font-weight-bold;
+            font-family: $font-inter;
+
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $color-black;
+                color: $color-white;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<section class="nft-showcase" *ngFor="let nftShowcaseAvatar of nftShowcase">
+  <article class="nft-showcase-info">
+    <header class="nft-showcase-info-artist">
+      <figure class="nft-showcase-info-avatar">
+        <img [src]="nftShowcaseAvatar.avatar" alt="avatar-showcase" />
+        <figcaption>{{ nftShowcaseAvatar.username }}</figcaption>
+      </figure>
+      <div class="nft-showcase-info-collection">
+        <span>{{ nftShowcaseAvatar.collection }}</span>
+      </div>
+    </header>
+    <div class="nft-showcase-info-title">
+      <h1>Beyond the Dream.</h1>
+    </div>
+    <section class="nft-showcase-info-priceBox">
+      <header class="nft-showcase-info-priceBox-title">
+        <h4>Buy now price</h4>
+      </header>
+      <div class="nft-showcase-info-priceBox-content">
+        <div class="nft-showcase-info-priceBox-price">
+          <h3>{{ nftShowcaseAvatar.totalSale }}</h3>
+        </div>
+        <button class="nft-showcase-info-priceBox-offer">Make offer</button>
+      </div>
+    </section>
+  </article>
+
+  <figure class="nft-showcase-image">
+    <img [src]="nftShowcaseAvatar.image" alt="nft-showcase" />
+  </figure>
+</section>

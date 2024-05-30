@@ -1,0 +1,39 @@
+<div class="nft">
+  <div class="nft-info">
+    <div class="nft-info-title">
+      <h1>Hot NFT artists of the month</h1>
+      <button class="nft-artist-more"></button>
+    </div>
+    <div class="nft-info-content">
+      <span
+        >We are laying the groundwork for web3 — the next generation of the
+        internet full of limitless possibilities. Join the millions of creators,
+        collectors, and curators who are on this journey with you.</span
+      >
+    </div>
+  </div>
+  <div class="nft-grid">
+    <article class="user-card" *ngFor="let artist of artists">
+      <header class="user-card-header">
+        <span class="user-card-rank">{{ artist.id }}</span>
+      </header>
+      <figure class="user-figure">
+        <div class="user-figure-image">
+          <img
+            [src]="artist.avatar"
+            [style.background]="artist.backgroundColor"
+            alt="user-image"
+            class="user-avatar"
+          />
+        </div>
+        <figcaption class="user-info">
+          <h2 class="username">{{ artist.username }}</h2>
+          <div class="price">
+            <p class="total-sale">Total sale</p>
+            <strong>{{ artist.totalSale }}</strong>
+          </div>
+        </figcaption>
+      </figure>
+    </article>
+  </div>
+</div>

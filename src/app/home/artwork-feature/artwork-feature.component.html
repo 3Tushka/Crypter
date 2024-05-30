@@ -1,0 +1,61 @@
+<section class="artwork-feature">
+  <article class="collection">
+    <figure
+      class="collection-image"
+      (mouseenter)="scrollEnabled = true"
+      (mouseleave)="scrollEnabled = false"
+    >
+      <div class="pagination-bar">
+        <div
+          *ngFor="let artwork of artworkData; let i = index"
+          [class.active]="i === currentSlide"
+          (click)="currentSlide = i"
+        ></div>
+      </div>
+      <img [src]="artworkData[currentSlide].image" alt="Artwork image" />
+    </figure>
+    <div class="collection-box">
+      <div class="collection-info">
+        <header class="collection-info__title">
+          <h4>Collection</h4>
+          <p>
+            <img
+              [src]="'assets/icons/header-research-button.svg'"
+              alt="research-button"
+            />
+            {{ artworkData[currentSlide].collection }}
+          </p>
+        </header>
+        <header class="collection-info__title">
+          <h4>Buy Now</h4>
+          <p>
+            <img
+              [src]="'assets/icons/header-research-button.svg'"
+              alt="research-button"
+            />{{ artworkData[currentSlide].price.buyNow }}
+            {{ artworkData[currentSlide].price.currency }}
+          </p>
+        </header>
+        <header class="collection-info__title">
+          <h4>Reserve</h4>
+          <p>
+            <img
+              [src]="'assets/icons/header-research-button.svg'"
+              alt="research-button"
+            />{{ artworkData[currentSlide].price.reserve }}
+            {{ artworkData[currentSlide].price.currency }}
+          </p>
+        </header>
+      </div>
+      <div class="collection-controll-panel">
+        <div class="collection-controll-panel__title">
+          <h1>The Creator network.</h1>
+        </div>
+        <div class="controll-buttons">
+          <button class="view-nft button-feature">VIEW NFT</button>
+          <button class="view-bid button-feature">PLACE A BID</button>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
