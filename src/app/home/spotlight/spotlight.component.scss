@@ -1,0 +1,159 @@
+@import "src/assets/variables.scss";
+
+.spotlight {
+    padding: 2rem 5rem;
+
+    background-color: $color-black;
+    color: $color-white;
+
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: 80px;
+        font-weight: $font-weight-bold;
+        margin: 2rem 0;
+    }
+
+    &-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &-controll {
+        display: flex;
+        gap: 1rem;
+
+        .filter-button {
+            padding: 8px 24px;
+            background: none;
+            border: none;
+            color: $color-light-gray;
+            font-size: $font-size-body1;
+            font-family: $font-inter;
+            font-weight: $font-weight-bold;
+            border: 1px solid $color-black;
+            border-radius: 20px;
+
+            transition: 0.2s ease-in;
+
+            &:hover {
+                border: 1px solid $color-light-gray;
+                cursor: pointer;
+                color: $color-dark-gray;
+                background: $color-very-light-gray;
+            }
+        }
+    }
+
+    &-content {
+        margin: 4rem 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        gap: 2.5rem;
+
+        .card {
+            width: 100%;
+            max-width: 300px;
+
+            transition: transform 0.3s ease-in-out; // Add transition for smooth scaling
+            cursor: pointer;
+
+            &.scale-up {
+                transform: scale(1.1);
+            }
+
+            &.scale-down {
+                transform: scale(0.9);
+            }
+
+            &-image {
+                width: 100%;
+                height: auto;
+                max-width: 330px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+
+            &-info {
+                padding: 1rem 0;
+
+                &-main {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 1rem;
+
+                    span {
+                        font-size: $font-size-body1;
+                        font-family: $font-inter;
+                        font-weight: $font-weight-bold;
+                    }
+
+                    &-avatars {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+
+                        align-items: center;
+
+                        .avatars {
+                            width: 20%;
+                            transition: 0.3s ease-in;
+
+                            img {
+                                width: 36px;
+                                height: auto;
+                                border-radius: 50%; /* Makes the images circular */
+                                border: 3px solid white; /* Optional: white border around images */
+                                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12); /* Optional: adds shadow for depth */
+                                overflow: hidden; /* Ensures the image stays within the circle */
+
+                                background-color: black;
+                                transition: 0.3s ease-in;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                                width: 40%;
+                                transform: scale(1.1); // Optional: scales the image on
+
+                                img {
+                                    background-color: $color-very-light-gray;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-price {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1rem;
+
+                    span:nth-child(1) {
+                        font-size: $font-size-base;
+                        font-family: $font-inter;
+                        font-weight: $font-weight-bold;
+                        color: $color-light-gray;
+                    }
+
+                    span {
+                        font-size: $font-size-body1;
+                        font-family: $font-inter;
+                        font-weight: $font-weight-bold;
+                    }
+                }
+            }
+        }
+    }
+}

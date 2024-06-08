@@ -1,0 +1,45 @@
+<div class="spotlight">
+  <h1>Spotlight</h1>
+  <div class="spotlight-box">
+    <span>Projects you`ll love</span>
+    <div class="spotlight-controll">
+      <button class="filter-button" (click)="filterDataByDays(1)">1 day</button>
+      <button class="filter-button" (click)="filterDataByDays(7)">
+        7 days
+      </button>
+      <button class="filter-button" (click)="filterDataByDays(30)">
+        30 days
+      </button>
+    </div>
+  </div>
+  <div class="spotlight-content">
+    <div
+      class="card"
+      *ngFor="let spotlight of filteredItems"
+      (mouseenter)="onMouseEnter(spotlight)"
+      (mouseleave)="onMouseLeave()"
+      [ngClass]="{
+        'scale-up': spotlight === hoveredItem,
+        'scale-down': spotlight !== hoveredItem && isHovered
+      }"
+    >
+      <div class="card-image">
+        <img [src]="spotlight.image" alt="image" />
+      </div>
+      <div class="card-info">
+        <div class="card-info-main">
+          <span> {{ spotlight.collection }} </span>
+          <div class="card-info-main-avatars">
+            <div class="avatars" *ngFor="let index of spotlight.avatars">
+              <img [src]="index" alt="avatar" />
+            </div>
+          </div>
+        </div>
+        <div class="card-info-price">
+          <span>Buy now: </span>
+          <span>{{ spotlight.price }} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<section class="wallet">
+  <article class="wallet-info">
+    <figure class="wallet-info-logo">
+      <img src="../../../assets/icons/logo.svg" alt="Logo" />
+      <figcaption>Crypto</figcaption>
+    </figure>
+    <div class="wallet-info-content">
+      <header class="wallet-info-content-title">
+        <h2>Connect wallet.</h2>
+      </header>
+      <div class="wallet-info-content-subtitle">
+        <p>
+          Choose how you want to connect. There are several wallet providers.
+        </p>
+      </div>
+    </div>
+  </article>
+  <div class="wallet-control">
+    <div class="wallet-control-exit">
+      <div class="wallet-control-exit-icon">
+        <i class="fas fa-times" (click)="goToMainPage()">
+          <img src="../../../assets/icons/close.svg" alt="close" />
+        </i>
+      </div>
+    </div>
+    <div class="control-box">
+      <div class="control-box-title">
+        <h2>Choose the wallet.</h2>
+      </div>
+      <div class="wallet-selector">
+        <div class="tabs">
+          <button
+            class="tabs-button"
+            *ngFor="let network of networks"
+            [class.selected]="selectedNetwork === network"
+            (click)="selectNetwork(network)"
+          >
+            {{ network }}
+          </button>
+        </div>
+
+        <ul class="wallet-list">
+          <li
+            class="wallet-list-item"
+            *ngFor="let wallet of wallets"
+            [class.selected]="selectedWallet === wallet.name"
+            (click)="selectWallet(wallet)"
+          >
+            <img [src]="wallet.icon" [alt]="wallet.name" />
+            <span> {{ wallet.name }}</span>
+          </li>
+        </ul>
+
+        <button class="scan-to-connect">
+          <img
+            [src]="'../../../assets/icons/header-research-button.svg'"
+            alt="Connect"
+          />
+          <span>Scan to connect</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

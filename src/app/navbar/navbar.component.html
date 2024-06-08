@@ -17,7 +17,9 @@
   <div class="navbar-links">
     <a routerLink="/discover">Discover</a>
     <a routerLink="/feed">Feed</a>
-    <button class="connect-wallet button">Connect Wallet</button>
+    <button class="connect-wallet button" (click)="goToWalletPage()">
+      Connect Wallet
+    </button>
     <button class="menu button">
       <img [src]="'assets/icons/menu.svg'" alt="Menu" />
     </button>

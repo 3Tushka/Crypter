@@ -1,0 +1,53 @@
+@import "../../assets/variables.scss";
+.footer-info {
+    border-bottom: 2px solid $color-very-light-gray;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 4rem;
+
+    &-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+
+        .image {
+            display: flex;
+            align-items: center;
+
+            gap: 1rem;
+            span {
+                font-size: $font-size-title;
+                font-weight: $font-weight-bold;
+                color: $color-dark-gray;
+                font-family: $font-inter;
+
+                text-transform: uppercase;
+            }
+        }
+        figcaption {
+            font-size: $font-size-body1;
+            color: $color-light-gray;
+            font-family: $font-inter;
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    &-links {
+        max-width: 50vw;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+        }
+    }
+}

@@ -93,3 +93,267 @@ export const showcaseData = [
     image: './assets/images/sun.png',
   },
 ];
+
+export const collectionGallery = [
+  {
+    id: 1,
+    username: '@randomdash',
+    price: '1.2 ETH',
+    collectionName: 'UI8 all-access',
+    avatar: './assets/images/avatars/avatar-image-1.svg',
+    image: [
+      './assets/images/collectionGallery/collection-gallery-1.jpg',
+      './assets/images/collectionGallery/collection-gallery-2.png',
+      './assets/images/collectionGallery/collection-gallery-3.png',
+      './assets/images/collectionGallery/collection-gallery-5.png',
+      './assets/images/collectionGallery/collection-gallery-4.png',
+      './assets/images/collectionGallery/collection-gallery-6.png',
+      './assets/images/collectionGallery/collection-gallery-5.png',
+      './assets/images/collectionGallery/collection-gallery-4.png',
+      './assets/images/collectionGallery/collection-gallery-6.png',
+    ],
+  },
+
+  {
+    id: 2,
+    username: '@tranmautritam',
+    price: '1.0 ETH',
+    collectionName: 'Cute Planer',
+    avatar: './assets/images/avatars/avatar-image-1.svg',
+    image: [
+      './assets/images/collectionGallery/collection-gallery-5.png',
+      './assets/images/collectionGallery/collection-gallery-4.png',
+      './assets/images/collectionGallery/collection-gallery-6.png',
+      './assets/images/collectionGallery/collection-gallery-5.png',
+      './assets/images/collectionGallery/collection-gallery-4.png',
+    ],
+  },
+
+  {
+    id: 3,
+    username: '@randomdash',
+    price: '1.5 ETH',
+    collectionName: 'Beyond the sky',
+    avatar: './assets/images/avatars/avatar-image-1.svg',
+    image: [
+      './assets/images/collectionGallery/collection-gallery-9.png',
+      './assets/images/collectionGallery/collection-gallery-8.png',
+      './assets/images/collectionGallery/collection-gallery-7.png',
+      './assets/images/collectionGallery/collection-gallery-5.png',
+      './assets/images/collectionGallery/collection-gallery-4.png',
+      './assets/images/collectionGallery/collection-gallery-6.png',
+    ],
+  },
+
+  {
+    id: 4,
+    username: '@randomdash',
+    price: '1.5 ETH',
+    collectionName: 'Beyond the sky',
+    avatar: './assets/images/avatars/avatar-image-1.svg',
+    image: [
+      './assets/images/collectionGallery/collection-gallery-9.png',
+      './assets/images/collectionGallery/collection-gallery-8.png',
+      './assets/images/collectionGallery/collection-gallery-7.png',
+      './assets/images/collectionGallery/collection-gallery-5.png',
+      './assets/images/collectionGallery/collection-gallery-4.png',
+      './assets/images/collectionGallery/collection-gallery-6.png',
+    ],
+  },
+
+  {
+    id: 5,
+    username: '@randomdash',
+    price: '1.5 ETH',
+    collectionName: 'Beyond the sky',
+    avatar: './assets/images/avatars/avatar-image-1.svg',
+    image: [
+      './assets/images/collectionGallery/collection-gallery-9.png',
+      './assets/images/collectionGallery/collection-gallery-8.png',
+      './assets/images/collectionGallery/collection-gallery-7.png',
+      './assets/images/collectionGallery/collection-gallery-5.png',
+      './assets/images/collectionGallery/collection-gallery-4.png',
+      './assets/images/collectionGallery/collection-gallery-6.png',
+    ],
+  },
+
+  {
+    id: 6,
+    username: '@randomdash',
+    price: '1.5 ETH',
+    collectionName: 'Beyond the sky',
+    avatar: './assets/images/avatars/avatar-image-1.svg',
+    image: [
+      './assets/images/collectionGallery/collection-gallery-9.png',
+      './assets/images/collectionGallery/collection-gallery-8.png',
+      './assets/images/collectionGallery/collection-gallery-7.png',
+      './assets/images/collectionGallery/collection-gallery-5.png',
+      './assets/images/collectionGallery/collection-gallery-4.png',
+      './assets/images/collectionGallery/collection-gallery-6.png',
+    ],
+  },
+];
+
+export const spotlightData = [
+  {
+    id: 1,
+    image: './assets/images/spotlight/Frame-1.png',
+    collection: 'The Currency',
+    price: '2.5 ETH',
+    avatars: [
+      './assets/images/avatars/avatar-image-1.svg',
+      './assets/images/avatars/avatar-image-2.svg',
+      './assets/images/avatars/avatar-image-3.svg',
+    ],
+
+    date: new Date('2024-08-06T12:00:00').toLocaleString(),
+  },
+
+  {
+    id: 2,
+    image: './assets/images/spotlight/Frame-2.png',
+    collection: 'Cute Planet',
+    price: '12.3 ETH',
+    avatars: [
+      './assets/images/avatars/avatar-image-1.svg',
+      './assets/images/avatars/avatar-image-2.svg',
+      './assets/images/avatars/avatar-image-3.svg',
+    ],
+
+    date: new Date('2024-08-06T12:00:00').toLocaleString(),
+  },
+
+  {
+    id: 3,
+    image: './assets/images/spotlight/Frame-3.png',
+    collection: 'The Currency',
+    price: '2.5 ETH',
+    avatars: [
+      './assets/images/avatars/avatar-image-1.svg',
+      './assets/images/avatars/avatar-image-2.svg',
+      './assets/images/avatars/avatar-image-3.svg',
+    ],
+
+    date: new Date('2024-05-01T12:00:00').toLocaleString(),
+  },
+
+  {
+    id: 4,
+    image: './assets/images/spotlight/Frame-4.png',
+    collection: 'The Currency',
+    price: '2.5 ETH',
+    avatars: [
+      './assets/images/avatars/avatar-image-1.svg',
+      './assets/images/avatars/avatar-image-2.svg',
+      './assets/images/avatars/avatar-image-3.svg',
+    ],
+
+    date: new Date('2024-02-06T12:00:00').toLocaleString(),
+  },
+
+  {
+    id: 5,
+    image: './assets/images/spotlight/Frame-5.png',
+    collection: 'The Currency',
+    price: '2.5 ETH',
+    avatars: [
+      './assets/images/avatars/avatar-image-1.svg',
+      './assets/images/avatars/avatar-image-2.svg',
+      './assets/images/avatars/avatar-image-3.svg',
+    ],
+
+    date: new Date('2024-01-06T12:00:00').toLocaleString(),
+  },
+
+  {
+    id: 6,
+    image: './assets/images/spotlight/Frame-6.png',
+    collection: 'The Currency',
+    price: '2.5 ETH',
+    avatars: [
+      './assets/images/avatars/avatar-image-1.svg',
+      './assets/images/avatars/avatar-image-2.svg',
+      './assets/images/avatars/avatar-image-3.svg',
+    ],
+
+    date: new Date('2024-12-04T12:00:00').toLocaleString(),
+  },
+
+  {
+    id: 7,
+    image: './assets/images/spotlight/Frame-7.png',
+    collection: 'The Currency',
+    price: '2.5 ETH',
+    avatars: [
+      './assets/images/avatars/avatar-image-1.svg',
+      './assets/images/avatars/avatar-image-2.svg',
+      './assets/images/avatars/avatar-image-3.svg',
+    ],
+    date: new Date('2024-08-06T12:00:00').toLocaleString(),
+  },
+
+  {
+    id: 8,
+    image: './assets/images/spotlight/Frame-8.png',
+    collection: 'The Currency',
+    price: '2.5 ETH',
+    avatars: [
+      './assets/images/avatars/avatar-image-1.svg',
+      './assets/images/avatars/avatar-image-2.svg',
+      './assets/images/avatars/avatar-image-3.svg',
+    ],
+    date: new Date('2024-08-06T12:00:00').toLocaleString(),
+  },
+
+  {
+    id: 9,
+    image: './assets/images/spotlight/Frame-9.png',
+    collection: 'The Currency',
+    price: '2.5 ETH',
+    avatars: [
+      './assets/images/avatars/avatar-image-1.svg',
+      './assets/images/avatars/avatar-image-2.svg',
+      './assets/images/avatars/avatar-image-3.svg',
+    ],
+    date: new Date('2024-08-06T12:00:00').toLocaleString(),
+  },
+
+  {
+    id: 10,
+    image: './assets/images/spotlight/Frame-10.png',
+    collection: 'The Currency',
+    price: '2.5 ETH',
+    avatars: [
+      './assets/images/avatars/avatar-image-1.svg',
+      './assets/images/avatars/avatar-image-2.svg',
+      './assets/images/avatars/avatar-image-3.svg',
+    ],
+    date: new Date('2024-08-06T12:00:00').toLocaleString(),
+  },
+
+  {
+    id: 11,
+    image: './assets/images/spotlight/Frame-11.png',
+    collection: 'The Currency',
+    price: '2.5 ETH',
+    avatars: [
+      './assets/images/avatars/avatar-image-1.svg',
+      './assets/images/avatars/avatar-image-2.svg',
+      './assets/images/avatars/avatar-image-3.svg',
+    ],
+    date: new Date('2024-08-06T12:00:00').toLocaleString(),
+  },
+
+  {
+    id: 12,
+    image: './assets/images/spotlight/Frame-12.png',
+    collection: 'The Currency',
+    price: '2.5 ETH',
+    avatars: [
+      './assets/images/avatars/avatar-image-1.svg',
+      './assets/images/avatars/avatar-image-2.svg',
+      './assets/images/avatars/avatar-image-3.svg',
+    ],
+    date: new Date('2024-08-06T12:00:00').toLocaleString(),
+  },
+];
