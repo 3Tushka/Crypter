@@ -1,0 +1,101 @@
+<section class="profile" *ngFor="let user of usersData">
+  <app-navbar></app-navbar>
+  <div class="profile-wrapper">
+    <section class="profile-info">
+      <figure class="profile-avatar">
+        <img [src]="user.avatar" alt="User's avatar" />
+      </figure>
+      <header class="profile-header">
+        <h1>{{ user.username }}</h1>
+        <button class="profile-follow-btn">Follow +</button>
+      </header>
+      <address class="profile-contact-mail">
+        <p>{{ user.email }}</p>
+        <p class="address">
+          {{ user.address }}
+          <img src="../../../assets/icons/copy.svg" alt="copy" />
+        </p>
+      </address>
+      <section class="profile-main-data">
+        <article class="profile-item">
+          <p>{{ user.total_sales }}</p>
+          <figure class="icon">
+            <img
+              src="../../../assets/icons/profile.svg"
+              alt="Total sales icon"
+            />
+            <figcaption>Total sales</figcaption>
+          </figure>
+        </article>
+        <article class="profile-item">
+          <p>{{ user.following }}</p>
+          <figure class="icon">
+            <img src="../../../assets/icons/profile.svg" alt="Following icon" />
+            <figcaption>Following</figcaption>
+          </figure>
+        </article>
+        <article class="profile-item">
+          <p>{{ user.followers }}</p>
+          <figure class="icon">
+            <img src="../../../assets/icons/profile.svg" alt="Followers icon" />
+            <figcaption>Followers</figcaption>
+          </figure>
+        </article>
+      </section>
+      <section class="profile-content">
+        <article class="profile-box">
+          <section class="profile-bio">
+            <h6>Bio</h6>
+            <p>{{ user.bio }}</p>
+          </section>
+          <nav class="profile-links">
+            <h4>Links:</h4>
+            <div class="profile-links-website">
+              <a href="">
+                <img src="../../../assets/icons/country.svg" alt="country" />
+                {{ user.links.website }}
+              </a>
+            </div>
+            <div class="profile-links-mirror">
+              <a href="">
+                <img src="../../../assets/icons/link.svg" alt="link" />
+                {{ user.links.mirror }}</a
+              >
+            </div>
+          </nav>
+        </article>
+        <aside class="profile-social">
+          <ul class="social-media">
+            <li class="social-media-li">
+              <a href="">
+                <img src="../../../assets/icons/facebook.svg" alt="Facebook" />
+              </a>
+            </li>
+            <li class="social-media-li">
+              <a href="">
+                <img src="../../../assets/icons/twitter.svg" alt="Twitter" />
+              </a>
+            </li>
+            <li class="social-media-li">
+              <a href="">
+                <img
+                  src="../../../assets/icons/instagram.svg"
+                  alt="Instagram"
+                />
+              </a>
+            </li>
+            <li class="social-media-li">
+              <a href="">
+                <img src="../../../assets/icons/linkedin.svg" alt="Linkedin" />
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </section>
+    </section>
+    <section class="profile-gallery">
+      <!-- Filler change later -->
+      <app-spotlight></app-spotlight>
+    </section>
+  </div>
+</section>

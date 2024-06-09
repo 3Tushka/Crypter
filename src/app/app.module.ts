@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { SpotlightComponent } from './home/spotlight/spotlight.component';
+import { ProfileComponent } from './profile/profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { SpotlightComponent } from './home/spotlight/spotlight.component';
     WalletListComponent,
     CollectionGalleryComponent,
     SpotlightComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

@@ -357,3 +357,20 @@ export const spotlightData = [
     date: new Date('2024-08-06T12:00:00').toLocaleString(),
   },
 ];
+
+export const users = [
+  {
+    username: 'Kohaku',
+    avatar: './assets/images/users/avatar.jpg',
+    email: '@kohaku',
+    address: '0x1e86...533B',
+    total_sales: '96 ETH',
+    following: 1920,
+    followers: 2880,
+    bio: 'We are laying the groundwork for web3 — the next generation of the internet full of limitless possibilities. Join the millions of creators, collectors, and curators who are on this journey.',
+    links: {
+      website: 'ui8.net',
+      mirror: 'mirror.xyz/ui8',
+    },
+  },
+];
