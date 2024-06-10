@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { users } from 'src/assets/data';
 
 @Component({
@@ -6,7 +6,8 @@ import { users } from 'src/assets/data';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss'],
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
+  showGalleryComponent: string | undefined;
   constructor() {}
 
   usersData = users;

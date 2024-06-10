@@ -372,5 +372,95 @@ export const users = [
       website: 'ui8.net',
       mirror: 'mirror.xyz/ui8',
     },
+    profile_stats: {
+      created: 256,
+      collection: 4,
+      owned: 16,
+    },
+    profile_nft_created: [
+      {
+        id: 1,
+        title: 'Escape',
+        artist: {
+          profile_images: [
+            '../assets/images/avatars/avatar-image-1.svg',
+            '../assets/images/avatars/avatar-image-2.svg',
+            '../assets/images/avatars/avatar-image-3.svg',
+          ],
+        },
+        price: '12.29 ETH',
+        image: '../assets/images/nft-created/nft-created-1.png',
+      },
+
+      {
+        id: 2,
+        title: 'Escape',
+        artist: {
+          profile_images: [
+            '../assets/images/avatars/avatar-image-1.svg',
+            '../assets/images/avatars/avatar-image-4.svg',
+            '../assets/images/avatars/avatar-image-2.svg',
+          ],
+        },
+        price: '12.29 ETH',
+        image: '../assets/images/nft-created/nft-created-2.jpg',
+      },
+
+      {
+        id: 3,
+        title: 'Escape',
+        artist: {
+          profile_images: [
+            '../assets/images/avatars/avatar-image-1.svg',
+            '../assets/images/avatars/avatar-image-4.svg',
+            '../assets/images/avatars/avatar-image-2.svg',
+          ],
+        },
+        price: '12.29 ETH',
+        image: '../assets/images/nft-created/nft-created-3.png',
+      },
+
+      {
+        id: 4,
+        title: 'Escape',
+        artist: {
+          profile_images: [
+            '../assets/images/avatars/avatar-image-1.svg',
+            '../assets/images/avatars/avatar-image-4.svg',
+            '../assets/images/avatars/avatar-image-2.svg',
+          ],
+        },
+        price: '12.29 ETH',
+        image: '../assets/images/nft-created/nft-created-4.png',
+      },
+
+      {
+        id: 5,
+        title: 'Escape',
+        artist: {
+          profile_images: [
+            '../assets/images/avatars/avatar-image-1.svg',
+            '../assets/images/avatars/avatar-image-4.svg',
+            '../assets/images/avatars/avatar-image-2.svg',
+          ],
+        },
+        price: '12.29 ETH',
+        image: '../assets/images/nft-created/nft-created-5.png',
+      },
+
+      {
+        id: 6,
+        title: 'Escape',
+        artist: {
+          profile_images: [
+            '../assets/images/avatars/avatar-image-1.svg',
+            '../assets/images/avatars/avatar-image-4.svg',
+            '../assets/images/avatars/avatar-image-2.svg',
+          ],
+        },
+        price: '12.29 ETH',
+        image: '../assets/images/nft-created/nft-created-6.png',
+      },
+    ],
   },
 ];

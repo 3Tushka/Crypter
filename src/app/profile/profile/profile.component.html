@@ -94,8 +94,98 @@
       </section>
     </section>
     <section class="profile-gallery">
-      <!-- Filler change later -->
-      <app-spotlight></app-spotlight>
+      <div class="profile-controll">
+        <button
+          (click)="showGalleryComponent = 'nft-created'"
+          class="profile-controll-button"
+        >
+          Created <span>{{ user.profile_stats.created }}</span>
+        </button>
+        <button
+          (click)="showGalleryComponent = 'nft-collection'"
+          class="profile-controll-button"
+        >
+          Collection <span>{{ user.profile_stats.collection }}</span>
+        </button>
+        <button
+          (click)="showGalleryComponent = 'nft-owned'"
+          class="profile-controll-button"
+        >
+          Owned <span>{{ user.profile_stats.owned }}</span>
+        </button>
+      </div>
+      <div class="profile-showtime">
+        <div
+          class="profile-created nft-created"
+          *ngIf="showGalleryComponent === 'nft-created'"
+        >
+          <div class="nft-created-controll">
+            <div class="box" *ngFor="let images of user.profile_nft_created">
+              <div
+                class="nft-created-avatars"
+                *ngFor="let profileImage of images.artist.profile_images"
+              >
+                <img [src]="profileImage" alt="NFT avatar" />
+              </div>
+            </div>
+
+            <div class="nft-created-panel">
+              <button class="grid-view">
+                <i>
+                  <img src="../../../assets/icons/grid.svg" alt="grid" />
+                </i>
+              </button>
+              <button class="list-view">
+                <i>
+                  <img src="../../../assets/icons/list.svg" alt="list" />
+                </i>
+              </button>
+              <button class="backround-view">
+                <i>
+                  <img src="../../../assets/icons/sun.svg" alt="sun" />
+                </i>
+              </button>
+            </div>
+          </div>
+          <div class="nft-created-content">
+            <div
+              class="nft-created-item"
+              *ngFor="let profileItem of user.profile_nft_created"
+            >
+              <div class="nft-created-item-image">
+                <img [src]="profileItem.image" alt="created-image" />
+              </div>
+              <div class="nft-created-item-info">
+                <h2>{{ profileItem.title }}</h2>
+                <span>Buy now</span>
+                <div class="nft-created-item-price">
+                  <p>{{ profileItem.price }}</p>
+                  <div
+                    class="nft-created-item-price-images"
+                    *ngFor="let images of profileItem.artist.profile_images"
+                  >
+                    <img [src]="images" alt="artist" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="profile-created"
+          *ngIf="showGalleryComponent === 'nft-collection'"
+        >
+          a
+        </div>
+
+        <div
+          class="profile-created"
+          *ngIf="showGalleryComponent === 'nft-owned'"
+        >
+          b
+        </div>
+      </div>
     </section>
   </div>
 </section>

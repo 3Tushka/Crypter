@@ -17,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { SpotlightComponent } from './home/spotlight/spotlight.component';
 import { ProfileComponent } from './profile/profile/profile.component';
+import { NftCreatedComponent } from './profile/nft-created/nft-created.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { ProfileComponent } from './profile/profile/profile.component';
     CollectionGalleryComponent,
     SpotlightComponent,
     ProfileComponent,
+    NftCreatedComponent,
   ],
   imports: [
     BrowserModule,
