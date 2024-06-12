@@ -1,0 +1,233 @@
+@import "../../../assets/variables";
+
+.menu {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+
+    &__container {
+        width: 100%;
+        max-width: 50svw;
+        background-color: $color-purple;
+    }
+
+    &__social-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        max-width: calc(50svw - 10rem);
+
+        padding: 5rem;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        &__title {
+            margin-bottom: 2.5rem;
+            h1 {
+                font-size: 80px;
+                font-family: $font-inter;
+                font-weight: $font-weight-bold;
+                line-height: 80px;
+            }
+        }
+
+        &__social {
+            .social-media {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 2rem;
+
+                &-li {
+                    width: 100%;
+                    max-width: 142px;
+                    background-color: $color-white;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 12px;
+                    a {
+                        width: 100%;
+                        height: 48px;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    &:hover {
+                        background-color: $color-very-light-gray;
+                        a {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__close {
+        align-self: flex-end;
+        margin-right: 2rem;
+
+        &-close {
+            width: 24px;
+            height: 24px;
+            background: none;
+            border: none;
+            object-fit: contain;
+
+            cursor: pointer;
+            transition: 0.1s;
+
+            &:hover {
+                transform: scale(1.1);
+
+                .svg-path {
+                    fill: red;
+                }
+            }
+        }
+    }
+
+    &__navigation {
+        background-color: $color-black;
+        padding: 2rem 0 5rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__listBox {
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &-item {
+                width: 100%;
+                border-bottom: 0.5px solid $color-gray;
+
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-decoration: none;
+                    color: $color-white;
+
+                    padding: 1rem 5rem;
+
+                    .menu__listBox__list-item__title {
+                        transition: all 0.2s;
+                        font-size: 24px;
+                        font-family: $font-inter;
+                        font-weight: $font-weight-bold;
+                        line-height: 24px;
+                        display: inline; // Ensure the element can have a background
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: $color-white; // Make the text color transparent to show the backgroundand #color2 with your colors
+                    }
+
+                    .arrow {
+                        width: 100%;
+                        max-width: 40px;
+                        position: relative;
+                        transform: translateX(0);
+                        transition: all 0.2s;
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+
+                    &:hover {
+                        .menu__listBox__list-item__title {
+                            background-image: linear-gradient(to right, #f9f9f9, #ffe100, #097914, #ff0000, #ff00dd); //
+                            color: transparent; // Require
+                        }
+
+                        .arrow {
+                            transform: translateX(20px); // Move to the right on hover
+                            img {
+                                filter: invert(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__download {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        color: $color-white;
+        padding: 0 5rem;
+
+        &__title {
+            h3 {
+                font-size: 24px;
+                font-family: $font-inter;
+                font-weight: $font-weight-bold;
+                line-height: 24px;
+                color: $color-light-gray;
+            }
+        }
+
+        &__box {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            .download--btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                gap: 1rem;
+                width: 100%;
+                max-width: 230px;
+                padding: 18px 36px 18px 36px;
+
+                background: $color-dark-gray;
+                color: $color-white;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+
+                transition: 0.2s;
+
+                span {
+                    //styleName: BUTTON/L;
+                    font-family: $font-inter;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    font-weight: 800;
+                    line-height: 24px;
+                    letter-spacing: 0.17em;
+                    text-align: left;
+                }
+
+                &:hover {
+                    background: $color-white;
+                    color: $color-dark-gray;
+
+                    .svg-path {
+                        stroke: $color-dark-gray;
+                    }
+                }
+            }
+        }
+    }
+}

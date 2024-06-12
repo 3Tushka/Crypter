@@ -462,5 +462,128 @@ export const users = [
         image: '../assets/images/nft-created/nft-created-6.png',
       },
     ],
+    followersData: [
+      {
+        username: 'Dash',
+        email: '@dash',
+        avatar: '../assets/images/avatars/avatar-image-1.svg',
+        createdNFTs: 12,
+        followStatus: 'Follow',
+      },
+      {
+        username: 'Kohaku',
+        email: '@kohaku',
+        avatar: '../assets/images/avatars/avatar-image-2.svg',
+        createdNFTs: 48,
+        followStatus: 'Follow',
+      },
+      {
+        username: 'Moyo Shiro',
+        email: '@moyo',
+        avatar: '../assets/images/avatars/avatar-image-3.svg',
+        createdNFTs: 32,
+        followStatus: 'Follow',
+      },
+      {
+        username: 'Kohaku',
+        email: '@kohaku',
+        avatar: '../assets/images/avatars/avatar-image-4.svg',
+        createdNFTs: 60,
+        followStatus: 'Follow',
+      },
+      {
+        username: 'Kohaku',
+        email: '@kohaku',
+        avatar: '../assets/images/avatars/avatar-image-6.svg',
+        createdNFTs: 4,
+        followStatus: 'Follow',
+      },
+    ],
+  },
+];
+
+export const profileCollection = [
+  {
+    title: 'Escape II',
+    metrics: {
+      change: '+22.4%',
+      floorPrice: {
+        amount: 1.0,
+        currency: 'ETH',
+      },
+    },
+    image: {
+      url: '../assets/images/users/collections/profile-collection-1.jpg',
+      description:
+        'A dark and mystical seascape featuring a ship entangled in massive, serpentine tentacles under a haunting sky.',
+    },
+    avatars: [
+      '../assets/images/avatars/avatar-image-1.svg',
+      '../assets/images/avatars/avatar-image-2.svg',
+      '../assets/images/avatars/avatar-image-3.svg',
+    ],
+  },
+
+  {
+    title: 'Escape II',
+    metrics: {
+      change: '+22.4%',
+      floorPrice: {
+        amount: 1.0,
+        currency: 'ETH',
+      },
+    },
+    image: {
+      url: '../assets/images/users/collections/profile-collection-2.jpg',
+      description:
+        'A dark and mystical seascape featuring a ship entangled in massive, serpentine tentacles under a haunting sky.',
+    },
+    avatars: [
+      '../assets/images/avatars/avatar-image-1.svg',
+      '../assets/images/avatars/avatar-image-2.svg',
+      '../assets/images/avatars/avatar-image-3.svg',
+    ],
+  },
+
+  {
+    title: 'Escape II',
+    metrics: {
+      change: '+22.4%',
+      floorPrice: {
+        amount: 1.0,
+        currency: 'ETH',
+      },
+    },
+    image: {
+      url: '../assets/images/users/collections/profile-collection-3.jpg',
+      description:
+        'A dark and mystical seascape featuring a ship entangled in massive, serpentine tentacles under a haunting sky.',
+    },
+    avatars: [
+      '../assets/images/avatars/avatar-image-1.svg',
+      '../assets/images/avatars/avatar-image-2.svg',
+      '../assets/images/avatars/avatar-image-3.svg',
+    ],
+  },
+
+  {
+    title: 'Escape II',
+    metrics: {
+      change: '+22.4%',
+      floorPrice: {
+        amount: 1.0,
+        currency: 'ETH',
+      },
+    },
+    image: {
+      url: '../assets/images/users/collections/profile-collection-4.jpg',
+      description:
+        'A dark and mystical seascape featuring a ship entangled in massive, serpentine tentacles under a haunting sky.',
+    },
+    avatars: [
+      '../assets/images/avatars/avatar-image-1.svg',
+      '../assets/images/avatars/avatar-image-2.svg',
+      '../assets/images/avatars/avatar-image-3.svg',
+    ],
   },
 ];

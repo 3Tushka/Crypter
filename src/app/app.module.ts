@@ -18,6 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { SpotlightComponent } from './home/spotlight/spotlight.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 import { NftCreatedComponent } from './profile/nft-created/nft-created.component';
+import { NftFollowersComponent } from './profile/nft-followers/nft-followers.component';
+import { MainMenuComponent } from './navbar/main-menu/main-menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +35,8 @@ import { NftCreatedComponent } from './profile/nft-created/nft-created.component
     SpotlightComponent,
     ProfileComponent,
     NftCreatedComponent,
+    NftFollowersComponent,
+    MainMenuComponent,
   ],
   imports: [
     BrowserModule,

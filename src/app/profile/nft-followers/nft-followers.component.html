@@ -1,0 +1,66 @@
+<div class="followers" *ngFor="let followerData of followers">
+  <div class="followers__control">
+    <button
+      (click)="showFollowerBox = 'nft-followers'"
+      class="followers__control-button"
+    >
+      Followers
+      <span class="followers__control-button-text">{{
+        followerData.followers
+      }}</span>
+    </button>
+    <button
+      (click)="showFollowerBox = 'nft-following'"
+      class="followers__control-button"
+    >
+      Following
+      <span class="followers__control-button-text">{{
+        followerData.following
+      }}</span>
+    </button>
+  </div>
+  <div class="followers__content">
+    <div
+      class="followers__content-section"
+      *ngIf="showFollowerBox === 'nft-followers'"
+    >
+      <header class="followers__content-header">
+        <div class="followers__content-title">
+          <h2>Followers</h2>
+        </div>
+        <div class="followers__content-number">
+          <span>{{ followerData.followers }}</span>
+        </div>
+      </header>
+      <div
+        class="followers__content-main"
+        *ngFor="let followerItem of followerData.followersData"
+      >
+        <div class="followers__content-item">
+          <div class="followers__content-item-image">
+            <img [src]="followerItem.avatar" alt="follower" />
+          </div>
+          <div class="followers__content-item-info">
+            <div class="followers__content-item-info-header">
+              <h2>{{ followerItem.username }}</h2>
+              <p>{{ followerItem.email }}</p>
+            </div>
+            <div class="followers__content-item-info-content">
+              <span>Created</span>
+              <p>{{ followerItem.createdNFTs }} NFT`s</p>
+            </div>
+          </div>
+          <div class="followers__content-item-follow">
+            <button class="follower__content-item-follow-btn">Follow +</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="followers__content-section"
+      *ngIf="showFollowerBox === 'nft-following'"
+    >
+      Following
+    </div>
+  </div>
+</div>
