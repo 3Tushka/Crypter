@@ -1,0 +1,37 @@
+<section class="notification-activity">
+  <app-navbar></app-navbar>
+  <div class="notification-activity__wrapper">
+    <div class="notification-activity__panel">
+      <div class="notification-activity__control-panel">
+        <button
+          (click)="
+            showNotifications = true;
+            showActivity = false;
+            setActiveButton('notification')
+          "
+          [class.notification-activity__button--active]="
+            activeButton === 'notification'
+          "
+          class="notification-activity__button notification-activity__button--control"
+        >
+          Notification
+        </button>
+        <button
+          (click)="
+            showNotifications = false;
+            showActivity = true;
+            setActiveButton('activity')
+          "
+          [class.notification-activity__button--active]="
+            activeButton === 'activity'
+          "
+          class="notification-activity__button notification-activity__button--control"
+        >
+          Activity
+        </button>
+      </div>
+    </div>
+  </div>
+  <app-notification *ngIf="showNotifications"></app-notification>
+  <app-activity *ngIf="showActivity"></app-activity>
+</section>

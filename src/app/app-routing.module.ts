@@ -4,6 +4,7 @@ import { WalletListComponent } from './wallet/wallet-list/wallet-list.component'
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 import { MainMenuComponent } from './navbar/main-menu/main-menu.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'main-menu',
     component: MainMenuComponent,
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent,
   },
 ];
 

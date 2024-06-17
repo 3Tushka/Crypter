@@ -1,0 +1,53 @@
+<section class="settings">
+  <app-navbar></app-navbar>
+  <div class="settings__wrapper">
+    <div class="settings__controll">
+      <h2 class="settings__h2">Settings</h2>
+      <ul class="settings__list">
+        <li class="settings__list__item">
+          <button
+            class="settings__list__item--btn"
+            (click)="
+              showProfileSettings = true;
+              showWalletSettings = false;
+              showNotificationSettings = false
+            "
+          >
+            Profile
+          </button>
+        </li>
+        <li class="settings__list__item">
+          <button
+            class="settings__list__item--btn"
+            (click)="
+              showProfileSettings = false;
+              showWalletSettings = true;
+              showNotificationSettings = false
+            "
+          >
+            Wallet
+          </button>
+        </li>
+        <li class="settings__list__item">
+          <button
+            class="settings__list__item--btn"
+            (click)="
+              showProfileSettings = false;
+              showWalletSettings = false;
+              showNotificationSettings = true
+            "
+          >
+            Notification
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="settings__content">
+      <app-profile-settings *ngIf="showProfileSettings"></app-profile-settings>
+      <app-wallet-settings *ngIf="showWalletSettings"></app-wallet-settings>
+      <app-notification-settings
+        *ngIf="showNotificationSettings"
+      ></app-notification-settings>
+    </div>
+  </div>
+</section>

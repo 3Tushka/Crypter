@@ -1,0 +1,73 @@
+<section class="notification">
+  <div class="notification__wrapper">
+    <div class="notification__panel">
+      <div class="notification__list-container">
+        <div class="notification__header">
+          <h2 class="notification__title">Notification</h2>
+          <span class="notification__date">August 2022</span>
+        </div>
+
+        <ul
+          class="notification__list"
+          *ngFor="let followers of notificationFollowers"
+        >
+          <li
+            class="notification__item"
+            *ngFor="let follower of followers.followersData"
+          >
+            <div class="notification__avatar-container">
+              <img
+                class="notification__avatar"
+                [src]="follower.avatar"
+                alt="avatar"
+              />
+            </div>
+            <div class="notification__content">
+              <div class="notification__content__user-info">
+                <span class="notification__content__email">{{
+                  follower.email
+                }}</span>
+                <span class="notification__content__date-posted"
+                  >Date Aug 17</span
+                >
+                <!-- Change date to dynamic -->
+              </div>
+              <span class="notification__content__message">Followed You</span>
+              <button class="notification__button notification__button--follow">
+                Follow +
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="notification__box">
+      <div class="notification__filter"></div>
+      <div class="notification__filter__box">
+        <h2>Filters</h2>
+        <div class="notification__filter__list">
+          <div
+            *ngFor="let filter of filters"
+            class="notification__filter__list__item"
+          >
+            <input
+              type="checkbox"
+              [id]="filter.name"
+              [(ngModel)]="filter.selected"
+              class="notification__filter__list__checkbox"
+            />
+            <label [for]="filter.name">{{ filter.name }}</label>
+          </div>
+        </div>
+        <div class="notification__filter__controll">
+          <button class="notifiaction__filter-btn" (click)="selectAll()">
+            Select All
+          </button>
+          <button class="notifiaction__filter-btn" (click)="deselectAll()">
+            Deselect All
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

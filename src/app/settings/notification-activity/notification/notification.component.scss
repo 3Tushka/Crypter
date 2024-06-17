@@ -1,0 +1,289 @@
+@import "../../../../assets/variables";
+.notification {
+    background-image: url("../../../../assets/backgrounds/profile-filler.jpg");
+    width: 100%;
+    height: 25rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        background: $color-black;
+        color: $color-white;
+    }
+
+    &__panel {
+        width: 100%;
+        max-width: 50vw;
+    }
+
+    &__control-panel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: $color-light-gray;
+        font-weight: 600;
+        line-height: 36px;
+        padding: 5%;
+        width: 100%;
+        border-bottom: 1px solid $color-gray;
+        transition: 0.2s;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        &--control,
+        &--follow {
+            &:hover {
+                color: $color-white;
+                border-bottom: 1px solid transparent;
+                border-image: linear-gradient(
+                    to bottom right,
+                    #fc2727 0%,
+                    #e7fc2c 25%,
+                    #fdec33 50%,
+                    #37fe3e 75%,
+                    #fd1892 100%
+                );
+                border-image-slice: 1;
+            }
+        }
+
+        &--follow {
+            border: 1px solid gray;
+            padding: 2%;
+        }
+    }
+
+    &__list-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        padding: 0 5rem;
+    }
+
+    &__title {
+        //styleName: h3/L;
+        font-family: Inter;
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 48px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        margin: 2rem 0;
+    }
+    &__date {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        text-align: left;
+        color: $color-light-gray;
+        font-family: $font-inter;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        border-bottom: 1px solid $color-dark-gray;
+        padding: 2rem 5rem;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-dark-gray;
+        }
+    }
+    &__avatar-container {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #37fe3e;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        width: 80%;
+
+        &__user-info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__email {
+            font-family: $font-inter;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+            text-align: left;
+            color: $color-white;
+        }
+
+        &__date-posted {
+            font-family: $font-inter;
+            font-weight: 400;
+            color: $color-light-gray;
+        }
+
+        &__message {
+            font-family: $font-inter;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+            text-align: left;
+            color: $color-light-gray;
+            width: 100%;
+        }
+    }
+
+    &__box {
+        background-color: $color-white;
+        color: $color-black;
+        width: 100%;
+        max-width: 50vw;
+    }
+
+    &__filter {
+        &__box {
+            padding: 5rem;
+
+            h2 {
+                //styleName: h4/L;
+                font-family: $font-inter;
+                font-size: 32px;
+                font-weight: 800;
+                line-height: 40px;
+                letter-spacing: -0.02em;
+                text-align: left;
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 3rem 0 5rem;
+
+            &__item {
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+                width: 100%;
+                max-width: 200px;
+            }
+
+            label {
+                font-family: $font-inter;
+                font-size: $font-size-body1;
+                font-weight: 700;
+                line-height: 36px;
+                letter-spacing: -0.01em;
+                text-align: left;
+            }
+
+            &__checkbox {
+                width: 31px;
+                height: 31px;
+                border-radius: 5px;
+                outline: orangered;
+                appearance: none; // Remove default styling
+                background-color: $color-white;
+                border: 2px solid #ccc; // New border style
+                position: relative;
+
+                &:checked {
+                    background-color: $color-black; // Checked state background color
+                    &:after {
+                        content: "\2713"; // Custom checkmark
+                        color: white; // Checkmark color
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%); // Center the checkmark
+                        font-size: 20px; // Checkmark size
+                    }
+                }
+            }
+        }
+
+        &__filter {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__controll {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 1.25rem;
+
+            .notifiaction__filter-btn {
+                width: 100%;
+                max-width: 310px;
+                height: 40px;
+                padding: 12px 32px 12px 32px;
+                gap: 8px;
+                border-radius: 4px 0px 0px 0px;
+                border: 2px solid $color-very-light-gray;
+                border: 2px 0px 0px 0px;
+                opacity: 0px;
+
+                text-transform: uppercase;
+                background: none;
+                color: $color-black;
+
+                //styleName: BUTTON/L;
+                font-family: Inter;
+                font-size: 12px;
+                font-weight: 800;
+
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: $color-very-light-gray;
+                    color: $color-black;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

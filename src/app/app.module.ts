@@ -20,6 +20,15 @@ import { ProfileComponent } from './profile/profile/profile.component';
 import { NftCreatedComponent } from './profile/nft-created/nft-created.component';
 import { NftFollowersComponent } from './profile/nft-followers/nft-followers.component';
 import { MainMenuComponent } from './navbar/main-menu/main-menu.component';
+import { SettingsComponent } from './settings/settings.component';
+import { NotificationComponent } from './settings/notification-activity/notification/notification.component';
+import { FormsModule } from '@angular/forms';
+import { ActivityComponent } from './settings/notification-activity/activity/activity.component';
+import { NotificationActivityComponent } from './settings/notification-activity/notification-activity.component';
+import { ProfileSettingsComponent } from './settings/profile-settings/profile-settings.component';
+import { WalletSettingsComponent } from './settings/wallet-settings/wallet-settings.component';
+import { NotificationSettingsComponent } from './settings/notification-settings/notification-settings.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +46,13 @@ import { MainMenuComponent } from './navbar/main-menu/main-menu.component';
     NftCreatedComponent,
     NftFollowersComponent,
     MainMenuComponent,
+    SettingsComponent,
+    NotificationComponent,
+    ActivityComponent,
+    NotificationActivityComponent,
+    ProfileSettingsComponent,
+    WalletSettingsComponent,
+    NotificationSettingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +60,7 @@ import { MainMenuComponent } from './navbar/main-menu/main-menu.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,25 @@
+<!-- wallet-display.component.html -->
+<div class="wallet-display">
+  <div class="wallet-display__info">
+    <img
+      src="../../../assets/icons/wallet-ether.svg"
+      alt="Ethereum"
+      class="wallet-display__icon"
+    />
+    <div class="wallet-display__address">
+      <span>0x1e862Be555a66Ea69....533B</span>
+      <button
+        class="wallet-display__button wallet-display__button--refresh"
+        (click)="refreshWallet()"
+      >
+        <img src="assets/refresh-icon.png" alt="Refresh" />
+      </button>
+    </div>
+  </div>
+  <button
+    class="wallet-display__button wallet-display__button--link"
+    (click)="linkWallet()"
+  >
+    LINK WALLET
+  </button>
+</div>

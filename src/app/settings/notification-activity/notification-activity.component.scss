@@ -1,0 +1,85 @@
+@import "../../../assets/variables";
+
+.notification-activity {
+    background-image: url("../../../assets/backgrounds/profile-filler.jpg");
+    width: 100%;
+    height: 25rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        margin-top: 18rem;
+        background: $color-black;
+        color: $color-white;
+    }
+
+    &__panel {
+        width: 100%;
+        max-width: 50vw;
+    }
+
+    &__control-panel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: $color-light-gray;
+        font-weight: 600;
+        line-height: 36px;
+        padding: 5%;
+        width: 100%;
+        border-bottom: 1px solid $color-gray;
+        transition: 0.2s;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        &--control {
+            &:hover {
+                color: $color-white;
+                border-bottom: 1px solid transparent;
+                border-image: linear-gradient(
+                    to bottom right,
+                    #fc2727 0%,
+                    #e7fc2c 25%,
+                    #fdec33 50%,
+                    #37fe3e 75%,
+                    #fd1892 100%
+                );
+                border-image-slice: 1;
+            }
+
+            &--active {
+                color: $color-white;
+                border-bottom: 1px solid transparent;
+                border-image: linear-gradient(
+                    to bottom right,
+                    #fc2727 0%,
+                    #e7fc2c 25%,
+                    #fdec33 50%,
+                    #37fe3e 75%,
+                    #fd1892 100%
+                );
+                border-image-slice: 1;
+            }
+        }
+    }
+}
