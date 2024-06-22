@@ -1,0 +1,134 @@
+<section class="collection">
+  <app-navbar></app-navbar>
+  <section class="collection__wrapper">
+    <div class="collection__create-list" *ngIf="showCreateCollectionModal">
+      <article class="collection__container">
+        <section class="collection__box">
+          <header class="collection__title">
+            <h1>Create on Crypter.</h1>
+          </header>
+          <div class="collection__button">
+            <button class="create-button" aria-label="Create Collection">
+              <span>→</span>
+            </button>
+          </div>
+        </section>
+        <div class="collection__text">
+          <p>
+            We are laying the groundwork for web3 — the next generation of the
+            internet full of limitless possibilities. Join the millions of
+            creators, collectors, and curators who are on this journey with you.
+          </p>
+        </div>
+      </article>
+      <article class="collection__container">
+        <header class="collection__header">
+          <h2>Your collection</h2>
+          <span class="collection__header__count">{{
+            collections.length
+          }}</span>
+        </header>
+        <ul class="collection__list">
+          <li
+            class="collection__item collection__item--new"
+            (click)="toggleNewCollectionModal()"
+          >
+            <div class="collection__item-icon">+</div>
+            <div class="collection__item-text">Create new collection</div>
+          </li>
+          <li class="collection__item" *ngFor="let collection of collections">
+            <img
+              [src]="collection.imageUrl"
+              alt="{{ collection.name }}"
+              class="collection__item-icon"
+            />
+            <div class="collection__item-info">
+              <div class="collection__item-text">{{ collection.name }}</div>
+              <div class="collection__item-subtext">
+                {{ collection.count }} NFT
+              </div>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </div>
+    <div
+      class="collection__create-collection"
+      *ngIf="!showCreateCollectionModal && !isFormSubmited"
+    >
+      <div class="collection__container collection__form-container">
+        <header class="collection__header">
+          <h2>Create collection</h2>
+          <button
+            class="collection__return-btn"
+            (click)="toggleNewCollectionModal()"
+          >
+            &#8592;
+          </button>
+        </header>
+        <form class="form-section" (ngSubmit)="onSubmit()">
+          <p>Deploy a smart contract to showcase a series of NFT artworks.</p>
+          <div class="form-group input-icon-container">
+            <input
+              id="collection-name"
+              type="text"
+              placeholder="Collection name"
+            />
+            <img
+              class="input-icon"
+              src="../../assets/icons/profile.svg"
+              alt="Icon"
+            />
+          </div>
+          <div class="form-group input-icon-container">
+            <input
+              id="collection-symbol"
+              type="text"
+              placeholder="Collection symbol"
+            />
+            <img
+              class="input-icon"
+              src="../../assets/icons/mail.svg"
+              alt="Icon"
+            />
+          </div>
+          <button class="continue-button" type="submit">Continue</button>
+        </form>
+      </div>
+      <div class="collection__container">
+        <div class="preview-section">
+          <div class="preview-card">
+            <div class="preview-image"></div>
+            <div class="preview-details">
+              <p>0 NFT</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section *ngIf="isFormSubmited" class="congratulatory-section">
+      <div class="collection__container">
+        <div class="preview-section">
+          <div class="preview">
+            <div class="preview__image">
+              <img src="../../assets/images/logo.jpg" alt="" />
+            </div>
+            <div class="preview__details">
+              <h1>Congrats</h1>
+              <p>
+                You've now deployed your very own smart contract! This is an
+                important first step for all creators to make as you share your
+                work and mint NFTs in web3.
+              </p>
+              <div class="preview__buttons">
+                <button class="btn view">VIEW NFT</button>
+                <button class="btn share">SHARE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</section>

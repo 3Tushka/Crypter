@@ -587,3 +587,70 @@ export const profileCollection = [
     ],
   },
 ];
+
+export const nftAuctionData = [
+  {
+    id: 1,
+    item: 'D-O-G',
+    image: '../assets/images/auction/robot.webp',
+    description:
+      'Futuristic robot dog with a high-tech design featuring black and white with orange accents.',
+    auction: {
+      status: 'Active',
+      remainingTime: {
+        days: 23,
+        hours: 59,
+        minutes: 59,
+        seconds: 59,
+      },
+    },
+    socialMedia: {
+      platform: 'Twitter',
+      handle: '@randomdash',
+    },
+    actionButtons: [
+      {
+        label: 'View NFT',
+        action: 'view',
+        url: '#',
+      },
+      {
+        label: 'Place a bid',
+        action: 'bid',
+        url: '#',
+      },
+    ],
+  },
+  {
+    id: 1,
+    item: 'D-O-G',
+    image: '../assets/images/auction/auctionNFT/auction (1).jpg',
+    description:
+      'Futuristic robot dog with a high-tech design featuring black and white with orange accents.',
+    auction: {
+      status: 'Active',
+      remainingTime: {
+        days: 23,
+        hours: 59,
+        minutes: 59,
+        seconds: 59,
+      },
+    },
+    socialMedia: {
+      platform: 'Twitter',
+      handle: '@randomdash',
+    },
+    actionButtons: [
+      {
+        label: 'View NFT',
+        action: 'view',
+        url: '#',
+      },
+      {
+        label: 'Place a bid',
+        action: 'bid',
+        url: '#',
+      },
+    ],
+  },
+];

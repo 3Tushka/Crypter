@@ -5,11 +5,17 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 import { MainMenuComponent } from './navbar/main-menu/main-menu.component';
 import { SettingsComponent } from './settings/settings.component';
+import { DiscoverComponent } from './discover/discover/discover.component';
+import { CreateCollectionComponent } from './create-collection/create-collection.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  {
+    path: 'discover',
+    component: DiscoverComponent,
   },
   {
     path: 'wallet',
@@ -26,6 +32,10 @@ const routes: Routes = [
   {
     path: 'settings',
     component: SettingsComponent,
+  },
+  {
+    path: 'collection',
+    component: CreateCollectionComponent,
   },
 ];
 

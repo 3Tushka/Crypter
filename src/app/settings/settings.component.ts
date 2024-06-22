@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class SettingsComponent {
   showProfileSettings: boolean = false;
-  showWalletSettings: boolean = true;
-  showNotificationSettings: boolean = false;
+  showWalletSettings: boolean = false;
+  showNotificationSettings: boolean = true;
 }

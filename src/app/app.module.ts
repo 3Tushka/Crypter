@@ -28,6 +28,12 @@ import { NotificationActivityComponent } from './settings/notification-activity/
 import { ProfileSettingsComponent } from './settings/profile-settings/profile-settings.component';
 import { WalletSettingsComponent } from './settings/wallet-settings/wallet-settings.component';
 import { NotificationSettingsComponent } from './settings/notification-settings/notification-settings.component';
+import { DropdownComponent } from './profile/dropdown/dropdown.component';
+import { NewsletterComponent } from './newsletter/newsletter.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DiscoverComponent } from './discover/discover/discover.component';
+import { AuctionSliderComponent } from './discover/auction-slider/auction-slider.component';
+import { CreateCollectionComponent } from './create-collection/create-collection.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +59,11 @@ import { NotificationSettingsComponent } from './settings/notification-settings/
     ProfileSettingsComponent,
     WalletSettingsComponent,
     NotificationSettingsComponent,
+    DropdownComponent,
+    NewsletterComponent,
+    DiscoverComponent,
+    AuctionSliderComponent,
+    CreateCollectionComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +72,7 @@ import { NotificationSettingsComponent } from './settings/notification-settings/
     MatCardModule,
     MatButtonModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

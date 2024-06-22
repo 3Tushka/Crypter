@@ -1,1 +1,24 @@
-<p>notification-settings works!</p>
+<div class="notification-wrapper">
+  <div class="notification-title">
+    <h2>Notification</h2>
+  </div>
+  <div
+    *ngFor="let notification of notifications; let i = index"
+    class="notification"
+  >
+    <div class="notification-main">
+      <div class="notification-text">{{ notification.text }}</div>
+      <span class="notification-subtitle">
+        {{ notification.subtitle }}
+      </span>
+    </div>
+    <label class="switch">
+      <input
+        type="checkbox"
+        [checked]="notification.enabled"
+        (change)="toggleNotification(i)"
+      />
+      <span class="slider round"></span>
+    </label>
+  </div>
+</div>

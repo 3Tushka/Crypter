@@ -39,14 +39,63 @@
         </svg>
       </div>
       <div class="navbar__userbox__user">
-        <img
-          src="../../assets/images/avatars/avatar-image-1 .svg"
-          alt="avatar"
-        />
+        <button class="navbar__dropdown" (click)="toggleDropdown()">
+          <img
+            src="../../assets/images/avatars/avatar-image-1 .svg"
+            alt="avatar"
+          />
+        </button>
       </div>
     </div>
     <button class="menu button">
       <img [src]="'assets/icons/menu.svg'" alt="Menu" />
     </button>
   </div>
+  <!-- <div class="navbar__dropdown__content" *ngIf="dropdownOpen">
+    <app-dropdown></app-dropdown>
+  </div> -->
 </nav>
+
+<div class="navbar-dropdown-content dropdown" *ngIf="dropdownOpen">
+  <div class="dropdown-header">
+    <img
+      src="../../assets/images/avatars/avatar-image-1.svg"
+      alt="user avatar"
+      class="user-avatar"
+    />
+    <div class="dropdown-header__user-info">
+      <h2>Dash</h2>
+      <p>@randomdash</p>
+    </div>
+    <button (click)="toggleDropdown()" class="close-btn">X</button>
+  </div>
+  <div class="wallet-container">
+    <div class="wallet-info">
+      <div class="wallet-address">
+        <span>{{ walletInfo.address }}</span>
+        <span
+          class="status-indicator"
+          [class.connected]="walletIsConnected"
+        ></span>
+      </div>
+      <div class="wallet-address__currency">
+        <span class="wallet-address__currency--balance"
+          >{{ walletInfo.balanceETH }} ETH</span
+        >
+        <span class="wallet-address__currency--usd"
+          >$ {{ walletInfo.balanceUSD }}</span
+        >
+      </div>
+    </div>
+    <div class="wallet-actions">
+      <h3>Connected wallet</h3>
+      <button (click)="manageWallet()">Manage wallet</button>
+      <button (click)="disconnectWallet()">Disconnect</button>
+    </div>
+  </div>
+  <ul class="dropdown-menu">
+    <li>My profile</li>
+    <li>Settings</li>
+    <li>Help</li>
+  </ul>
+</div>

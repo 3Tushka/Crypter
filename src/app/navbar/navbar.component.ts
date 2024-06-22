@@ -13,6 +13,15 @@ export class NavbarComponent implements AfterViewInit {
     private renderer: Renderer2
   ) {}
 
+  walletInfo = {
+    address: '0x1e86...5338',
+    balanceETH: 3.345,
+    balanceUSD: 5448,
+  };
+
+  walletIsConnected = true;
+  dropdownOpen = false;
+
   ngAfterViewInit() {
     const navbar = this.elementRef.nativeElement;
     const parentElement = this.renderer.parentNode(navbar);
@@ -44,5 +53,19 @@ export class NavbarComponent implements AfterViewInit {
 
   goToWalletPage() {
     this.router.navigate(['/wallet']);
+  }
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  manageWallet(): void {
+    // Logic to manage wallet
+    console.log('Managing wallet');
+  }
+
+  disconnectWallet(): void {
+    // Logic to disconnect wallet
+    console.log('Wallet disconnected');
   }
 }
