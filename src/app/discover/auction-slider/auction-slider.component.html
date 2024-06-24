@@ -1,11 +1,62 @@
 <div class="slider">
-  <div
-    *ngFor="let item of auctionItems; let i = index"
-    class="slide"
-    [class.active]="i === currentSliderIndex"
-  >
-    <img [src]="item.image" [alt]="item.item" />
-  </div>
-  <button (click)="prevSlide()">&#10094;</button>
-  <button (click)="nextSlide()">&#10095;</button>
+  <ng-container *ngIf="auctionItems[currentSliderIndex] as currentItem">
+    <div class="slide" style="position: relative">
+      <div class="slide__controll">
+        <button class="slide__controll--btn" (click)="prevSlide()">
+          &#10094;
+        </button>
+        <button class="slide__controll--btn" (click)="nextSlide()">
+          &#10095;
+        </button>
+      </div>
+      <div class="slide__image">
+        <img
+          class="slide__image--img"
+          [src]="currentItem.image"
+          [alt]="currentItem.item"
+        />
+      </div>
+      <div class="slide__info">
+        <div class="slide__container slide__userdata">
+          <div class="slide__info__user">
+            <div class="slide__info__user--title">{{ currentItem.item }}</div>
+            <div class="slide__info__user--username">
+              {{ currentItem.socialMedia.handle }}
+            </div>
+          </div>
+          <div class="slide__info__bids">
+            <button class="slide__info__bids--btn">View NFT</button>
+            <button class="slide__info__bids--btn">Place a Bid</button>
+          </div>
+        </div>
+        <div class="slide__container">
+          <div class="slide__timer">
+            <div class="slide__timer__title">
+              <span>Auction end in</span>
+            </div>
+            <div class="timer-container">
+              <div class="time-section">
+                <span class="time-section__value">{{
+                  currentItem.auction.remainingTime.hours
+                }}</span>
+                <span class="time-section__label">hours</span>
+              </div>
+              <div class="time-section">
+                <span class="time-section__value">{{
+                  currentItem.auction.remainingTime.minutes
+                }}</span>
+                <span class="time-section__label">minutes</span>
+              </div>
+              <div class="time-section">
+                <span class="time-section__value">{{
+                  currentItem.auction.remainingTime.seconds
+                }}</span>
+                <span class="time-section__label">seconds</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
 </div>

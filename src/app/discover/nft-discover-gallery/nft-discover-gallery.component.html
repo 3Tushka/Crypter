@@ -1,0 +1,125 @@
+<div
+  class="discover-gallery"
+  [style.background-color]="backgroundColor"
+  [style.color]="fontColor"
+>
+  <div class="discover-gallery__wrapper">
+    <div class="discover-gallery__controls">
+      <!-- Simplify control buttons by iterating over a predefined array of tabs -->
+      <div class="discover-gallery__controls__container">
+        <ng-container *ngFor="let tab of tabs">
+          <button
+            class="discover-gallery__controls--tab"
+            [class.discover-gallery__controls-tab--active]="
+              activeTab === tab.id
+            "
+            (click)="selectTab(tab.id)"
+          >
+            {{ tab.label }} <span *ngIf="tab.count">{{ tab.count }}</span>
+          </button>
+        </ng-container>
+      </div>
+      <div class="discover-gallery__controls--bg">
+        <button
+          class="discover-gallery__controls--bg-btn"
+          (click)="changeBackgroundColorOnClick()"
+        >
+          <img src="../../../assets/icons/sun.svg" alt="toggle background" />
+        </button>
+      </div>
+    </div>
+    <div class="discover-gallery__content gallery">
+      <div class="gallery__controls">
+        <div class="gallery__controls__title" (click)="setTimeFilter(0)">
+          <h2>{{ activeTab === "all" ? "All" : activeTab }}</h2>
+        </div>
+        <div class="gallery__controls__buttons">
+          <button
+            class="gallery__controls__buttons--time-filter"
+            (click)="setTimeFilter(1)"
+          >
+            1 day
+          </button>
+          <button
+            class="gallery__controls__buttons--time-filter"
+            (click)="setTimeFilter(7)"
+          >
+            7 days
+          </button>
+          <button
+            class="gallery__controls__buttons--time-filter"
+            (click)="setTimeFilter(30)"
+          >
+            30 days
+          </button>
+        </div>
+      </div>
+      <div class="gallery__grid">
+        <div class="gallery__grid__item" *ngFor="let item of nftFillteredItems">
+          <img
+            [src]="item.imageUrl"
+            alt="grid-item-image"
+            class="gallery__grid__item__image"
+          />
+          <div class="gallery__grid__item__info">
+            <div class="gallery__grid__item__info__userdata">
+              <div class="userdata">
+                <img
+                  [src]="item.creator.avatarUrl"
+                  alt="user-avatar"
+                  class="gallery__grid__item__info__userdata__avatar"
+                  loading="lazy"
+                />
+                <div class="gallery__grid__item__info__userdata__name">
+                  {{ item.creator.username }}
+                </div>
+              </div>
+              <div class="eye-icon">
+                <svg width="12.2" height="12.2" viewBox="0 0 100 100">
+                  <defs>
+                    <radialGradient
+                      id="eyeGradient"
+                      cx="50%"
+                      cy="50%"
+                      r="50%"
+                      fx="50%"
+                      fy="50%"
+                    >
+                      <stop
+                        offset="0%"
+                        style="stop-color: rgb(255, 255, 255); stop-opacity: 1"
+                      />
+                    </radialGradient>
+                  </defs>
+                  <path
+                    d="M10,50 A40,40 0 1,1 90,50 A40,40 0 1,1 10,50"
+                    fill="url(#eyeGradient)"
+                  />
+                  <circle cx="50" cy="50" r="20" fill="black" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="gallery__grid__item__bid">
+              <div class="gallery__grid__item__bid--current">
+                <span> <i class="dot"></i>Current bid</span>
+                <span
+                  >{{ item.bidding.currentBid }}
+                  {{ item.bidding.currency }}</span
+                >
+              </div>
+              <div class="line"></div>
+              <div class="gallery__grid__item__bid--buyNow">
+                <span>Buy now</span>
+                <span
+                  >{{ item.buyNowPrice.amount }}
+                  {{ item.buyNowPrice.currency }}</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

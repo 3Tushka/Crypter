@@ -1,0 +1,299 @@
+@import "../../../assets/variables";
+
+.discover-gallery {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+
+        padding: 32px 80px;
+        border-bottom: 0.0625rem solid $color-very-light-gray;
+
+        &__container {
+            display: flex;
+            gap: 80px;
+        }
+
+        &--tab {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            align-self: start;
+
+            //styleName: Body 1/L;
+            font-family: $font-inter;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 2rem;
+            letter-spacing: -0.02em;
+            text-align: left;
+            color: $color-black;
+
+            background: none;
+            border: none;
+
+            span {
+                background-color: $color-very-light-gray;
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.5rem;
+
+                //styleName: Base/L;
+                font-family: Inter;
+                font-size: 1rem;
+                font-weight: 700;
+                line-height: 1.5rem;
+                letter-spacing: -0.01em;
+                text-align: left;
+                color: $color-light-gray;
+            }
+        }
+
+        &--bg {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 3rem;
+                height: 3rem;
+
+                //styleName: Body 1/L;
+                font-family: $font-inter;
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 2rem;
+                letter-spacing: -0.02em;
+                text-align: center;
+
+                background: none;
+                border: 0.0625rem solid $color-gray;
+                border-radius: 100%;
+                color: $color-gray;
+                cursor: pointer;
+
+                transition: 0.1s;
+
+                &:hover {
+                    color: $color-very-light-gray;
+                    background-color: $color-very-light-gray;
+                }
+            }
+        }
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        margin: 8rem 5rem;
+
+        &__controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &__title {
+                h2 {
+                    //styleName: h1/L;
+                    font-family: $font-inter;
+                    font-size: 50px;
+                    font-weight: 800;
+                    line-height: 80px;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+
+                    text-transform: capitalize;
+                    cursor: pointer;
+                }
+            }
+
+            &__buttons {
+                display: flex;
+                gap: 2rem;
+
+                &--time-filter {
+                    //styleName: Base/L;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: -0.01em;
+                    text-align: left;
+                    background-color: none;
+                    background: none;
+                    color: $color-black;
+
+                    border: none;
+                    padding: 8px 24px;
+                    border-radius: 24px;
+
+                    cursor: pointer;
+                    transition: 0.2s ease-out;
+
+                    &:hover {
+                        background-color: $color-black;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.25rem;
+
+                background-color: transparent;
+                border-radius: 20px;
+                padding: 20px;
+
+                cursor: pointer;
+                transition: 0.1s ease-in-out;
+
+                &:hover {
+                    background-color: $color-dark-gray;
+                    color: $color-white;
+                }
+
+                &__image {
+                    width: 100%;
+                    height: 300px;
+                    border-radius: 20px;
+                    background-color: $color-very-light-gray;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 20px;
+                    }
+                }
+
+                &__info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    .userdata {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                    }
+
+                    &__userdata {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 1rem;
+                        padding-bottom: 1rem;
+
+                        border-bottom: 1px solid $color-very-light-gray;
+
+                        &__avatar {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background-color: $color-light-blue;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        &__name {
+                            //styleName: Body 1/L;
+                            font-family: $font-inter;
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 24px;
+                            letter-spacing: -0.01em;
+                            text-align: left;
+                        }
+
+                        // eye-icon.component.scss
+                        .eye-icon {
+                            width: 20.78px;
+                            height: 22.51px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: conic-gradient(from 90deg at 50% 50%, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+                            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                        }
+                    }
+                }
+
+                &__bid {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span {
+                        //styleName: Body 1/L;
+                        font-family: $font-inter;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 24px;
+                        letter-spacing: -0.01em;
+                        text-align: left;
+                    }
+
+                    span:nth-child(1) {
+                        //styleName: Body 2/L;
+                        font-family: $font-inter;
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 21px;
+                        letter-spacing: -0.01em;
+                        text-align: left;
+                        color: $color-light-gray;
+                    }
+
+                    &--current {
+                        display: flex;
+                        flex-direction: column;
+
+                        .dot {
+                            display: inline-block;
+                            width: 8px; // Size of the dot
+                            height: 8px; // Size of the dot
+                            background-color: orange; // Color of the dot
+                            border-radius: 50%; // Makes the dot round
+                            margin-right: 5px; // Space between the dot and the text
+                        }
+                    }
+
+                    .line {
+                        width: 1px;
+                        height: 50%;
+                        background-color: $color-very-light-gray;
+                    }
+
+                    &--buyNow {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -14,8 +14,8 @@ interface Collection {
 export class CreateCollectionComponent {
   collections: Collection[] = [];
 
-  showCreateCollectionModal = false;
-  isFormSubmited: boolean = true;
+  showCreateCollectionModal = true;
+  isFormSubmited: boolean = false;
 
   constructor() {}
 

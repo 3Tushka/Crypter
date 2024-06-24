@@ -598,8 +598,7 @@ export const nftAuctionData = [
     auction: {
       status: 'Active',
       remainingTime: {
-        days: 23,
-        hours: 59,
+        hours: 23,
         minutes: 59,
         seconds: 59,
       },
@@ -622,16 +621,15 @@ export const nftAuctionData = [
     ],
   },
   {
-    id: 1,
-    item: 'D-O-G',
-    image: '../assets/images/auction/auctionNFT/auction (1).jpg',
+    id: 2,
+    item: 'D-I-C-K',
+    image: '../assets/images/artworkDataImages/dream-7166281_1280.jpg',
     description:
       'Futuristic robot dog with a high-tech design featuring black and white with orange accents.',
     auction: {
       status: 'Active',
       remainingTime: {
-        days: 23,
-        hours: 59,
+        hours: 23,
         minutes: 59,
         seconds: 59,
       },
@@ -652,5 +650,106 @@ export const nftAuctionData = [
         url: '#',
       },
     ],
+  },
+];
+
+export const nftCardData = [
+  {
+    category: 'ESCP',
+    imageUrl: '../assets/images/auction/auctionNFT/auction (2).webp',
+    title: 'The Currency',
+    creator: {
+      username: '@randomdash',
+      avatarUrl: '../assets/images/avatars/avatar-image-1.svg',
+      verified: true,
+    },
+    bidding: {
+      currentBid: 1,
+      currency: 'ETH',
+    },
+    buyNowPrice: {
+      amount: 2,
+      currency: 'ETH',
+    },
+    date: new Date('2024-08-06T12:00:00').toLocaleString(),
+  },
+  {
+    category: 'ESCP',
+    imageUrl: '../assets/images/auction/auctionNFT/auction (1).jpg',
+    title: 'The Currency',
+    creator: {
+      username: '@randomdash',
+      avatarUrl: '../assets/images/avatars/avatar-image-1.svg',
+      verified: true,
+    },
+    bidding: {
+      currentBid: 1,
+      currency: 'ETH',
+    },
+    buyNowPrice: {
+      amount: 2,
+      currency: 'ETH',
+    },
+    date: new Date('2024-08-03T12:00:00').toLocaleString(),
+  },
+
+  {
+    category: 'ESCP',
+    imageUrl: '../assets/images/auction/auctionNFT/auction (1).jpg',
+    title: 'The Currency',
+    creator: {
+      username: '@randomdash',
+      avatarUrl: '../assets/images/avatars/avatar-image-1.svg',
+      verified: true,
+    },
+    bidding: {
+      currentBid: 1,
+      currency: 'ETH',
+    },
+    buyNowPrice: {
+      amount: 2,
+      currency: 'ETH',
+    },
+    date: new Date('2024-08-03T12:00:00').toLocaleString(),
+  },
+
+  {
+    category: 'ESCP',
+    imageUrl: '../assets/images/auction/auctionNFT/auction (1).jpg',
+    title: 'The Currency',
+    creator: {
+      username: '@randomdash',
+      avatarUrl: '../assets/images/avatars/avatar-image-1.svg',
+      verified: true,
+    },
+    bidding: {
+      currentBid: 1,
+      currency: 'ETH',
+    },
+    buyNowPrice: {
+      amount: 2,
+      currency: 'ETH',
+    },
+    date: new Date('2024-08-03T12:00:00').toLocaleString(),
+  },
+
+  {
+    category: 'ESCP',
+    imageUrl: '../assets/images/auction/auctionNFT/auction (1).jpg',
+    title: 'The Currency',
+    creator: {
+      username: '@randomdash',
+      avatarUrl: '../assets/images/avatars/avatar-image-1.svg',
+      verified: true,
+    },
+    bidding: {
+      currentBid: 1,
+      currency: 'ETH',
+    },
+    buyNowPrice: {
+      amount: 2,
+      currency: 'ETH',
+    },
+    date: new Date('2024-08-03T12:00:00').toLocaleString(),
   },
 ];

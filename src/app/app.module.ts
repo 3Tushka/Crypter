@@ -34,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DiscoverComponent } from './discover/discover/discover.component';
 import { AuctionSliderComponent } from './discover/auction-slider/auction-slider.component';
 import { CreateCollectionComponent } from './create-collection/create-collection.component';
+import { NftDiscoverGalleryComponent } from './discover/nft-discover-gallery/nft-discover-gallery.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { CreateCollectionComponent } from './create-collection/create-collection
     DiscoverComponent,
     AuctionSliderComponent,
     CreateCollectionComponent,
+    NftDiscoverGalleryComponent,
   ],
   imports: [
     BrowserModule,
