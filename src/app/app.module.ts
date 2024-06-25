@@ -35,6 +35,8 @@ import { DiscoverComponent } from './discover/discover/discover.component';
 import { AuctionSliderComponent } from './discover/auction-slider/auction-slider.component';
 import { CreateCollectionComponent } from './create-collection/create-collection.component';
 import { NftDiscoverGalleryComponent } from './discover/nft-discover-gallery/nft-discover-gallery.component';
+import { HelpComponent } from './help-center/help/help.component';
+import { HelpCategoryComponent } from './help-center/help-category/help-category.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,8 @@ import { NftDiscoverGalleryComponent } from './discover/nft-discover-gallery/nft
     AuctionSliderComponent,
     CreateCollectionComponent,
     NftDiscoverGalleryComponent,
+    HelpComponent,
+    HelpCategoryComponent,
   ],
   imports: [
     BrowserModule,

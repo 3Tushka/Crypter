@@ -1,0 +1,176 @@
+@import "../../../assets/variables";
+
+.help {
+    &__wrapper {
+        width: 100%;
+        height: auto;
+        display: flex;
+    }
+
+    &__info {
+        width: 100%;
+        max-width: 50vw;
+
+        display: flex;
+        flex-direction: column;
+
+        &__header {
+            max-width: 600px;
+            width: 100%;
+            padding: 5rem;
+
+            h1 {
+                //styleName: Hero/L;
+                font-family: $font-inter;
+                font-size: 80px;
+                font-weight: 800;
+                line-height: 104px;
+                text-align: left;
+            }
+
+            p {
+                //styleName: Body/L;
+                //styleName: Body 2/L;
+                font-family: Inter;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 32px;
+                letter-spacing: -0.02em;
+                text-align: left;
+
+                color: $color-gray;
+            }
+        }
+
+        &__search {
+            padding: 5rem;
+
+            // search-bar.component.scss
+            .search-form {
+                display: flex;
+                align-items: center;
+                background-color: #fff; // Background color of the search bar
+
+                border-bottom: 2px solid $color-very-light-gray;
+                input[type="text"] {
+                    align-items: start;
+                    border: none;
+                    padding: 8px 10px 30px;
+                    width: 100%; // Takes up remaining space
+                    font-size: 20px;
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &::placeholder {
+                        //styleName: Body 1/L;
+                        font-family: $font-inter;
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 32px;
+                        letter-spacing: -0.02em;
+                        text-align: left;
+
+                        color: $color-black;
+                    }
+                }
+
+                button {
+                    background: none;
+                    border: none;
+                    padding: 8px 10px 30px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #f8f8f8; // Slight background on hover for the button
+                    }
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 50vw;
+
+        &__item {
+            padding: 5rem;
+            display: flex;
+            gap: 4rem;
+            align-self: center;
+
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+            background-color: $color-dark-white;
+
+            &__data {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 1rem;
+
+                &__line {
+                    width: 60px;
+                    height: 16px;
+
+                    border-radius: 16px;
+                }
+
+                &__title {
+                    //styleName: h4/L;
+                    h2 {
+                        margin-top: 1rem;
+                        font-family: $font-inter;
+                        font-size: 32px;
+                        font-weight: 800;
+                        line-height: 40px;
+                        letter-spacing: -0.02em;
+                        text-align: left;
+                    }
+                }
+
+                &__subtext {
+                    //styleName: Body 2/L;
+                    font-family: $font-inter;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 32px;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+                    color: $color-light-gray;
+                }
+            }
+
+            &__img {
+                border-radius: 20px;
+                background-color: #f8f8f8;
+                transition: 0.2s ease-in-out;
+
+                img {
+                    max-width: 292px;
+                    height: auto;
+
+                    object-fit: contain;
+                    border-radius: 20px;
+                }
+            }
+
+            &:hover {
+                background-color: $color-white;
+                box-shadow:
+                    rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+                .help__content__item__img {
+                    background-color: $color-black;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,221 @@
+@import "../../../assets/variables";
+
+.help-category {
+    &__wrapper {
+        display: flex;
+    }
+
+    &__header {
+        width: 100%;
+        max-width: 50vw;
+        height: 100vh;
+        background-color: $color-purple;
+
+        &__wrapper {
+            padding: 5rem;
+        }
+
+        &__info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1 {
+            //styleName: h1/L;
+            font-family: Inter;
+            font-size: 80px;
+            font-weight: 800;
+            line-height: 80px;
+            letter-spacing: -0.02em;
+            text-align: left;
+        }
+
+        button {
+            width: 100%;
+            max-width: 80px;
+            height: 80px;
+            padding: 28px;
+            border: 1px solid $color-very-light-gray;
+            border-radius: 100%;
+
+            font-size: 28px;
+            // font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 50vw;
+
+        &__wrapper {
+            padding: 5rem;
+
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+            background-color: #fff; // Background color of the search bar
+
+            border-bottom: 2px solid $color-very-light-gray;
+            input[type="text"] {
+                align-items: start;
+                border: none;
+                padding: 8px 10px 30px;
+                width: 100%; // Takes up remaining space
+                font-size: 20px;
+                &:focus {
+                    outline: none;
+                }
+
+                &::placeholder {
+                    //styleName: Body 1/L;
+                    font-family: $font-inter;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 32px;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+
+                    color: $color-black;
+                }
+            }
+
+            button {
+                background: none;
+                border: none;
+                padding: 8px 10px 30px;
+                cursor: pointer;
+
+                &:hover {
+                    background: #f8f8f8; // Slight background on hover for the button
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .accordions {
+            border-bottom: 1px solid $color-very-light-gray;
+            padding-bottom: 1rem;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            &__item {
+                padding: 1rem 0;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &__title {
+                    //styleName: Body 1/L;
+                    font-family: $font-inter;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 32px;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+
+                    color: $color-black;
+                }
+
+                &__button-round {
+                    width: 30px;
+                    height: 30px;
+                    padding: 8px;
+                    background: none;
+                    border: 2px solid $color-light-gray;
+                    color: $color-light-gray;
+                    border-radius: 100%;
+
+                    font-size: 28px;
+                    font-weight: 100;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            &__content {
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                &:hover {
+                    cursor: pointer;
+
+                    .accordions__content__text {
+                        color: $color-blue;
+                    }
+
+                    .accordions__content__icon {
+                        border: 2px solid transparent;
+                        border-radius: 100%;
+
+                        &::before {
+                            content: "→";
+                            font-size: 24px;
+                            color: $color-blue;
+                        }
+                    }
+                }
+
+                &__text {
+                    //styleName: Body 2 (Bold)/L;
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 32px;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+                    color: $color-light-gray;
+                    cursor: pointer;
+                }
+
+                &__icon {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid $color-blue;
+                    border-radius: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+
+                    font-size: 20px;
+                    position: relative;
+                    &::before {
+                        content: "•";
+                        font-size: 24px;
+                        color: $color-blue;
+                        position: absolute;
+                    }
+                }
+            }
+
+            .hidden {
+                display: none;
+            }
+        }
+    }
+}

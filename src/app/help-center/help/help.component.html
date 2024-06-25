@@ -1,0 +1,50 @@
+<div class="help">
+  <app-navbar></app-navbar>
+  <div class="help__wrapper">
+    <div class="help__info">
+      <div class="help__info__header">
+        <h1>Help Center</h1>
+        <p>
+          We are laying the groundwork for web3 — the next generation of the
+          internet full of limitless possibilities.
+        </p>
+      </div>
+      <div class="help__info__search">
+        <form class="search-form">
+          <input
+            type="text"
+            placeholder="Search topics"
+            aria-label="Search topics"
+          />
+          <button type="submit" aria-label="Search">
+            <img
+              src="../../../assets/icons/search.svg"
+              alt="search"
+              class="search-icon"
+            />
+            <!-- Using Font Awesome for the search icon -->
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="help__content">
+      <div class="help__content__item" *ngFor="let helpItem of helpDataItems">
+        <div class="help__content__item__data">
+          <div class="help__content__item__data__title">
+            <div
+              class="help__content__item__data__line"
+              [style.background]="helpItem.backgroundColor"
+            ></div>
+            <h2>{{ helpItem.title }}</h2>
+          </div>
+          <div class="help__content__item__data__subtext">
+            <p>{{ helpItem.description }}</p>
+          </div>
+        </div>
+        <div class="help__content__item__img">
+          <img [src]="helpItem.image" alt="help" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

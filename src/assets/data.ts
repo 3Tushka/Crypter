@@ -753,3 +753,125 @@ export const nftCardData = [
     date: new Date('2024-08-03T12:00:00').toLocaleString(),
   },
 ];
+
+export const helpInfo = [
+  {
+    title: 'How to create an NFT',
+    description:
+      'Learn how to create an NFT from scratch, including how to mint, list, and sell your digital art.',
+    image: '../assets/images/help-center/Cube 1 1.svg',
+    urlLink: '#',
+    backgroundColor: '',
+  },
+  {
+    title: 'How to buy an NFT',
+    description:
+      'Learn how to buy an NFT, including how to connect your wallet, place a bid, and complete a purchase.',
+    image: '../assets/images/help-center/Cube 1 1 (2).svg',
+    urlLink: '#',
+    backgroundColor: '',
+  },
+  {
+    title: 'How to sell an NFT',
+    description:
+      'Learn how to sell an NFT, including how to list your digital art, set a reserve price, and receive payment.',
+    image: '../assets/images/help-center/Cube 1 1 (3).svg',
+    urlLink: '#',
+    backgroundColor: '',
+  },
+  {
+    title: 'How to create an NFT',
+    description:
+      'Learn how to create an NFT from scratch, including how to mint, list, and sell your digital art.',
+    image: '../assets/images/help-center/Cube 1 1 (1 ).svg',
+    urlLink: '#',
+    backgroundColor: '',
+  },
+];
+
+export const helpCategoryLinks = [
+  {
+    name: 'Buying',
+    items: [
+      {
+        title: 'Connect your wallet to Crypter',
+        content: 'Details on how to connect your wallet to Crypter.',
+      },
+      {
+        title: 'Guide to collection NFT artworks on Crypter',
+        content: 'Step-by-step guide to collecting NFT artworks on Crypter.',
+      },
+      {
+        title: 'Marketplace balance',
+        content:
+          'Information on how to check and understand your marketplace balance.',
+      },
+      {
+        title: 'Marketplace fees',
+        content:
+          'Details on the fees associated with transactions in the marketplace.',
+      },
+      {
+        title: 'What is offer price?',
+        content:
+          'Explanation of what an offer price is and how it is determined.',
+      },
+    ],
+  },
+  {
+    name: 'Selling',
+    items: [
+      {
+        title: 'Connect your wallet to Crypter',
+        content: 'Details on how to connect your wallet to Crypter.',
+      },
+      {
+        title: 'Guide to collection NFT artworks on Crypter',
+        content: 'Step-by-step guide to collecting NFT artworks on Crypter.',
+      },
+      {
+        title: 'Marketplace balance',
+        content:
+          'Information on how to check and understand your marketplace balance.',
+      },
+      {
+        title: 'Marketplace fees',
+        content:
+          'Details on the fees associated with transactions in the marketplace.',
+      },
+      {
+        title: 'What is offer price?',
+        content:
+          'Explanation of what an offer price is and how it is determined.',
+      },
+    ],
+  },
+  {
+    name: 'Creating',
+    items: [
+      {
+        title: 'Connect your wallet to Crypter',
+        content: 'Details on how to connect your wallet to Crypter.',
+      },
+      {
+        title: 'Guide to collection NFT artworks on Crypter',
+        content: 'Step-by-step guide to collecting NFT artworks on Crypter.',
+      },
+      {
+        title: 'Marketplace balance',
+        content:
+          'Information on how to check and understand your marketplace balance.',
+      },
+      {
+        title: 'Marketplace fees',
+        content:
+          'Details on the fees associated with transactions in the marketplace.',
+      },
+      {
+        title: 'What is offer price?',
+        content:
+          'Explanation of what an offer price is and how it is determined.',
+      },
+    ],
+  },
+];
