@@ -1,0 +1,31 @@
+<div class="blog-details">
+  <app-navbar></app-navbar>
+
+  <div class="blog-details__wrapper" *ngIf="renderData">
+    <div class="blog-details__title">
+      <h1>{{ renderData.header }}</h1>
+    </div>
+
+    <div class="blog-details__content">
+      <h2 class="blog-details__content__title">
+        {{ renderData.content[0] }}
+      </h2>
+      <div class="blog-details__content__text">
+        <span> {{ renderData.content[1] }}</span>
+        <div
+          class="text"
+          *ngFor="let item of renderData.content; let i = index"
+        >
+          <p *ngIf="i > 1">
+            {{ item }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="blog-details__image">
+      <img [src]="renderData.headerImage" alt="blog-image" />
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

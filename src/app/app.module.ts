@@ -37,6 +37,10 @@ import { CreateCollectionComponent } from './create-collection/create-collection
 import { NftDiscoverGalleryComponent } from './discover/nft-discover-gallery/nft-discover-gallery.component';
 import { HelpComponent } from './help-center/help/help.component';
 import { HelpCategoryComponent } from './help-center/help-category/help-category.component';
+import { CategoryDetailComponent } from './help-center/category-detail/category-detail.component';
+import { BlogComponent } from './blog/blog/blog.component';
+import { BlogDetailsComponent } from './blog/blog-details/blog-details.component';
+import { NftDetailsComponent } from './profile/nft-details/nft-details.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +74,10 @@ import { HelpCategoryComponent } from './help-center/help-category/help-category
     NftDiscoverGalleryComponent,
     HelpComponent,
     HelpCategoryComponent,
+    CategoryDetailComponent,
+    BlogComponent,
+    BlogDetailsComponent,
+    NftDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,55 @@
+<div class="blog">
+  <app-navbar></app-navbar>
+  <div class="blog__wrapper">
+    <div *ngFor="let blogPost of blogPosts">
+      <div class="blog__title">
+        <h1>{{ blogPost.title }}</h1>
+        <nav class="blog__navbar">
+          <ul class="blog__list">
+            <li class="blog__list__item">
+              {{ blogPost.subtitle }}
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div
+        class="blog__content"
+        *ngFor="let posts of blogPost.posts"
+        (click)="navigateToLink(posts.detailsLink)"
+      >
+        <div class="blog__image">
+          <img [src]="posts.image" alt="blog-image" />
+        </div>
+        <div class="blog__item">
+          <div class="blog__item__wrapper">
+            <div class="blog__item__title">
+              <h2>{{ posts.title }}</h2>
+              <div class="blog__item__creation">
+                <img
+                  class="color-wheel"
+                  src="../../../assets/icons/logo.svg"
+                  alt="logo"
+                />
+                <div class="box">
+                  <span class="blog__item__creation__author">{{
+                    posts.author
+                  }}</span>
+                  <span class="blog__item__creation__date">{{
+                    posts.date
+                  }}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog__item__text">
+              <p>{{ posts.summary }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-newsletter></app-newsletter>
+  <app-footer></app-footer>
+</div>

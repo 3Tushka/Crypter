@@ -9,6 +9,11 @@ import { DiscoverComponent } from './discover/discover/discover.component';
 import { CreateCollectionComponent } from './create-collection/create-collection.component';
 import { HelpComponent } from './help-center/help/help.component';
 import { HelpCategoryComponent } from './help-center/help-category/help-category.component';
+import { helpCategoryLinks } from 'src/assets/data';
+import { CategoryDetailComponent } from './help-center/category-detail/category-detail.component';
+import { BlogComponent } from './blog/blog/blog.component';
+import { BlogDetailsComponent } from './blog/blog-details/blog-details.component';
+import { NftDetailsComponent } from './profile/nft-details/nft-details.component';
 
 const routes: Routes = [
   {
@@ -27,6 +32,7 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
   },
+  { path: 'profile/:nft-details', component: NftDetailsComponent },
   {
     path: 'main-menu',
     component: MainMenuComponent,
@@ -46,8 +52,19 @@ const routes: Routes = [
   {
     path: 'category',
     component: HelpCategoryComponent,
-    pathMatch: 'full',
+
+    // children: [
+    //   {
+    //     path: ':categoryName',
+    //     component: CategoryDetailComponent,
+    //     data: { links: helpCategoryLinks },
+    //   },
+    // ],
   },
+  { path: 'category/:categoryName', component: CategoryDetailComponent },
+
+  { path: 'blog', component: BlogComponent },
+  { path: 'blog/:blogName', component: BlogDetailsComponent },
 ];
 
 @NgModule({

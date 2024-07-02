@@ -48,6 +48,7 @@
             class="accordions__content"
             *ngFor="let helpDataItems of helpData.items"
             [class.hidden]="isItemActive !== i"
+            (click)="navigateToLink(helpDataItems)"
           >
             <div class="accordions__content__icon"></div>
             <div class="accordions__content__text">

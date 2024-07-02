@@ -1,3 +1,5 @@
+import { formatForCheckLink, generateUrlLink } from 'src/app/functions';
+
 export const artworkData = [
   {
     collection: 'Escape ||',
@@ -796,10 +798,15 @@ export const helpCategoryLinks = [
       {
         title: 'Connect your wallet to Crypter',
         content: 'Details on how to connect your wallet to Crypter.',
+        urlLink: generateUrlLink('category', 'Connect your wallet to Crypter'),
       },
       {
         title: 'Guide to collection NFT artworks on Crypter',
         content: 'Step-by-step guide to collecting NFT artworks on Crypter.',
+        urlLink: generateUrlLink(
+          'category',
+          'guide-to-collection-nft-artworks-on-crypter'
+        ),
       },
       {
         title: 'Marketplace balance',
@@ -873,5 +880,240 @@ export const helpCategoryLinks = [
           'Explanation of what an offer price is and how it is determined.',
       },
     ],
+  },
+];
+
+export const helpCategoryItemsData = [
+  {
+    link: 'guide-to-collection-nft-artworks-on-crypter',
+    title: 'Guide to collection NFT artworks on Crypter',
+    header: {
+      menu: ['Help center', 'Buying'],
+    },
+    content: {
+      sections: [
+        {
+          image: '../assets/images/help-category/guide-collection.jpg',
+          title: 'Guide to collection NFT artworks on Crypter',
+          paragraphs: [
+            'We are laying the groundwork for web3 — the next generation of the internet full of limitless possibilities. Join the millions of creators, collectors, and curators who are on this journey with you.',
+            'Ratione earum minus quia consectetur debitis magnam. Ex nemo maiores reiciendis distinctio. Cupiditate nihil doloribus repellat voluptatem.',
+            'Et id possimus harum ipsa eum odit labore. Eligendi repellat impedit eaque corporis dolor ipsum vero. Vitae beatae aperiam consequatur consequatur praesentium minus sequi magni.',
+            'Et neque dolor velit aliquid earum reiciendis sequi harum. Laudantium et doloremque deleniti quaerat. Dolorem molestias doloribus. Non non laboriosam ut assumenda vel aut sequi.',
+          ],
+        },
+        {
+          image: '../assets/images/help-category/guide-bid.jpg',
+          title: 'Place a Bid',
+          paragraphs: [
+            'We are laying the groundwork for web3 — the next generation of the internet full of limitless possibilities. Join the millions of creators, collectors, and curators who are on this journey with you.',
+            'Ratione earum minus quia consectetur debitis magnam. Ex nemo maiores reiciendis distinctio. Cupiditate nihil doloribus repellat voluptatem.',
+            'Et id possimus harum ipsa eum odit labore. Eligendi repellat impedit eaque corporis dolor ipsum vero. Vitae beatae aperiam consequatur consequatur praesentium minus sequi magni.',
+            'Et neque dolor velit aliquid earum reiciendis sequi harum. Laudantium et doloremque deleniti quaerat. Dolorem molestias doloribus. Non non laboriosam ut assumenda vel aut sequi.',
+          ],
+        },
+      ],
+    },
+  },
+  {
+    link: 'connect-your-wallet-to-crypter',
+    title: 'Place a Bid',
+    header: {
+      menu: ['Help center', 'Buying'],
+    },
+    content: {
+      sections: [
+        {
+          image: '../assets/images/help-category/guide-bid.jpg',
+          title: 'Place a Bid',
+          paragraphs: [
+            'We are laying the groundwork for web3 — the next generation of the internet full of limitless possibilities. Join the millions of creators, collectors, and curators who are on this journey with you.',
+            'Ratione earum minus quia consectetur debitis magnam. Ex nemo maiores reiciendis distinctio. Cupiditate nihil doloribus repellat voluptatem.',
+            'Et id possimus harum ipsa eum odit labore. Eligendi repellat impedit eaque corporis dolor ipsum vero. Vitae beatae aperiam consequatur consequatur praesentium minus sequi magni.',
+            'Et neque dolor velit aliquid earum reiciendis sequi harum. Laudantium et doloremque deleniti quaerat. Dolorem molestias doloribus. Non non laboriosam ut assumenda vel aut sequi.',
+          ],
+        },
+      ],
+    },
+  },
+];
+
+export const blogData = [
+  {
+    title: 'Crypter Blog',
+    subtitle: 'Crypter NFT marketplace blog',
+    posts: [
+      {
+        title: "8 things you didn't know you could do on Crypter",
+        author: 'Crypter1',
+        date: '28 July 2022',
+        summary:
+          'Web3 is the next evolution of the internet built on open infrastructure where information, code, and objects are free to travel.',
+        image: '../assets/images/blog/Frame 1284.jpg',
+        detailsLink: generateUrlLink(
+          'blog',
+          '8-things-you-didnt-know-you-could-do-on-crypter'
+        ),
+      },
+      {
+        title: 'Introducing CrypterOS the operating system for web3.',
+        author: 'Crypter1',
+        date: '25 August 2022',
+        summary:
+          'Web3 is the next evolution of the internet but relies on an open infrastructure where information, code, and objects are free to travel.',
+        image: '../assets/images/blog/Frame 1284 (1).jpg',
+        detailsLink: generateUrlLink(
+          'blog',
+          'Introducing CrypterOS the operating system for web3.'
+        ),
+      },
+
+      {
+        title: 'Introducing CrypterOS the operating system for web3.',
+        author: 'Crypter1',
+        date: '25 August 2022',
+        summary:
+          'Web3 is the next evolution of the internet but relies on an open infrastructure where information, code, and objects are free to travel.',
+        image: '../assets/images/blog/Frame 1284 (2).jpg',
+        detailsLink: generateUrlLink(
+          'blog',
+          'crypter-os-the-operating-system-for-web3'
+        ),
+      },
+
+      {
+        title: '8 things you didn`t know you could do on Crypter',
+        author: 'Crypter1',
+        date: '25 August 2022',
+        summary:
+          'Web3 is the next evolution of the internet but relies on an open infrastructure where information, code, and objects are free to travel.',
+        image: '../assets/images/blog/Frame 1284 (3).jpg',
+        detailsLink: generateUrlLink(
+          'blog',
+          '8-things-you-didnt-know-you-could-do-on-crypter'
+        ),
+      },
+    ],
+  },
+];
+
+export const blogPostDataDetails = [
+  {
+    header: "8 things you didn't know you could do on Crypter",
+    headerImage: '../assets/images/collectionGallery/collection-gallery-1.jpg',
+    content: [
+      'Web3 is the next evolution of the internet built on open infrastructure where information, code, and objects are free to travel.',
+      'We are laying the groundwork for web3 — the next generation of the internet full of limitless possibilities. Join the millions of creators, collectors, and curators who are on this journey with you.',
+      'Ratione eorum minus quia consequatur debitis magnam. Ex nemo maiores reiciendis distinctio. Cupiditate nihil dolores repellat voluptatem.',
+      'Et id possimus harum ipsa eum odit labore. Eligenid repellat impedit eaque corporis dolor ipsam vero. Vitae beatae aperiam consequatur consequatur praesentium minus sequi magni.',
+      'Et neque dolor velit aliquid earum reiciendis sequi harum. Laudantium et doloremque deleniti quaerat. Dolorem molestias doloribus. Non non laboriosam ut assumenda vel aut sequi.',
+    ],
+    checkLink: formatForCheckLink(
+      '8-things-you-didnt-know-you-could-do-on-crypter'
+    ),
+  },
+
+  {
+    header: 'Oppiums',
+    headerImage: '../assets/images/collectionGallery/collection-gallery-1.jpg',
+    content: [
+      'Web3 is the next evolution of the internet built on open infrastructure where information, code, and objects are free to travel.',
+      'We are laying the groundwork for web3 — the next generation of the internet full of limitless possibilities. Join the millions of creators, collectors, and curators who are on this journey with you.',
+      'Ratione eorum minus quia consequatur debitis magnam. Ex nemo maiores reiciendis distinctio. Cupiditate nihil dolores repellat voluptatem.',
+      'Et id possimus harum ipsa eum odit labore. Eligenid repellat impedit eaque corporis dolor ipsam vero. Vitae beatae aperiam consequatur consequatur praesentium minus sequi magni.',
+      'Et neque dolor velit aliquid earum reiciendis sequi harum. Laudantium et doloremque deleniti quaerat. Dolorem molestias doloribus. Non non laboriosam ut assumenda vel aut sequi.',
+    ],
+    checkLink: formatForCheckLink(
+      'introducing-crypterOS-the-operating-system-for-web3.'
+    ),
+  },
+];
+
+export const nftItemDetails = [
+  {
+    nft: {
+      title: 'The Explorer',
+      mintedDate: 'August 18, 2022',
+      imageURL:
+        '../assets/images/nft-details/af740b813f65aa4e924ad60684ea2f1d.png',
+      createdBy: {
+        image: '../assets/images/avatars/avatar-image-1.svg',
+        name: 'Dash',
+        email: '@dash',
+        profileUrl: 'link_to_dash_profile',
+      },
+      collection: {
+        image: '../assets/images/collectionGallery/collection-gallery-3.png',
+        name: 'Cute Planet',
+        collectionUrl: 'link_to_cute_planet_collection',
+      },
+      description:
+        'We are laying the groundwork for web3 — the next generation of the internet full of limitless possibilities. Join the millions of creators, collectors, and curators who are on this journey with you.',
+    },
+    tags: [
+      'Cute',
+      'Robot',
+      'Cute Planet',
+      'Suitcase',
+      'Spaceship',
+      'Animation',
+      'Redshift Render',
+      '3D',
+      'Character',
+      'Cinema 4D',
+    ],
+    pricing: {
+      buyNow: 10.0,
+      reserve: 0.35,
+      lastSold: {
+        amount: 6.05,
+        currency: 'ETH',
+        valueInUSD: 9256.58,
+      },
+    },
+    transactions: [
+      {
+        type: 'sold',
+        amount: 6.05,
+        currency: 'ETH',
+        valueInUSD: 9256.58,
+        date: 'August 18, 2022',
+        time: '18:00',
+        buyer: {
+          name: 'Random Buyer',
+          profileUrl: 'link_to_buyer_profile',
+        },
+        auctioneer: {
+          name: 'Kohaku',
+          profileUrl: 'link_to_kohaku_profile',
+        },
+      },
+      {
+        type: 'bid',
+        amount: 5.0,
+        currency: 'ETH',
+        date: 'August 18, 2022',
+        time: '18:00',
+      },
+      {
+        type: 'listed',
+        amount: 5.0,
+        currency: 'ETH',
+        date: 'August 18, 2022',
+        time: '18:00',
+      },
+      {
+        type: 'minted',
+        amount: 5.0,
+        currency: 'ETH',
+        date: 'August 18, 2022',
+        time: '18:00',
+      },
+    ],
+    externalLinks: {
+      etherscan: 'link_to_etherscan',
+      metadata: 'link_to_metadata',
+      ipfs: 'link_to_ipfs',
+    },
   },
 ];

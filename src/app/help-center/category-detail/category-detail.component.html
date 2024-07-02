@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div class="category-detail">
+  <div class="category-detail__wrapper">
+    <div *ngIf="renderData; else noDataTemplate">
+      <div class="category-detail__title">
+        <h1>{{ renderData.title }}</h1>
+        <nav class="category-detail__navbar">
+          <ul class="category-detail__list">
+            <li
+              class="category-detail__list__item"
+              *ngFor="let menuItem of renderData.header.menu"
+            >
+              {{ menuItem }}
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Render content sections -->
+      <section
+        *ngFor="let section of renderData.content.sections"
+        class="category-detail__content"
+      >
+        <div class="category-detail__content__image">
+          <img [src]="section.image" alt="section image" />
+        </div>
+        <div class="category-detail__content__section">
+          <h2 class="category-detail__content__title">{{ section.title }}</h2>
+          <p
+            *ngFor="let paragraph of section.paragraphs"
+            class="category-detail__content__parag"
+          >
+            {{ paragraph }}
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <ng-template #noDataTemplate>
+      <p>No data available</p>
+    </ng-template>
+  </div>
+</div>
+
+<app-footer></app-footer>

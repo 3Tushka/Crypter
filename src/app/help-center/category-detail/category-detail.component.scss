@@ -1,0 +1,98 @@
+@import "../../../assets/variables.scss";
+
+.category-detail {
+    &__title {
+        background-image: url("../../../assets/backgrounds/bbffd1c1dbad91102c9904732022f795.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 660px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        color: $color-white;
+
+        h1 {
+            width: 100%;
+            max-width: 1200px;
+            font-family: $font-inter;
+            font-size: 80px;
+            font-weight: 800;
+            line-height: 80px;
+            letter-spacing: -0.02em;
+            text-align: center;
+
+            opacity: 0.95;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+
+        &__item {
+            //styleName: Body 1/L;
+            font-family: $font-inter;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: -0.02em;
+            text-align: left;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+
+        gap: 10rem;
+        margin: 5rem 5rem 8rem;
+
+        &__image {
+            width: 100%;
+            height: 100%;
+            max-width: 600px;
+            border-radius: 20px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+        }
+
+        &__section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__title {
+            //styleName: h3/L;
+            font-family: $font-inter;
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 48px;
+            letter-spacing: -0.02em;
+            text-align: left;
+
+            margin-bottom: 2rem;
+        }
+
+        &__parag {
+            //styleName: Body 2/L;
+            font-family: $font-inter;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 28px;
+            letter-spacing: -0.02em;
+            text-align: left;
+            color: $color-gray;
+        }
+    }
+}

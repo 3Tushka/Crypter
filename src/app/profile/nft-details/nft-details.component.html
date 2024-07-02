@@ -1,0 +1,111 @@
+<div class="nft-details">
+  <app-navbar></app-navbar>
+  <div class="nft-details__wrapper" *ngFor="let nftItemData of nftDetailsData">
+    <div class="nft-details__container">
+      <div class="nft-details__container__wrapper">
+        <div class="nft-details__image-box">
+          <div class="nft-details__image-box__controll">
+            <button class="nft-details__image-box__controll__button">
+              <img src="../../../assets/icons/music note.svg" alt="music" />
+            </button>
+            <button class="nft-details__image-box__controll__button">
+              <img
+                src="../../../assets/icons/fullscreen.svg"
+                alt="fullscreen"
+              />
+            </button>
+          </div>
+          <img [src]="nftItemData.nft.imageURL" alt="nft-image" />
+        </div>
+        <div class="nft-details__author-info">
+          <div class="nft-details__author-info__author">
+            <div class="title">Created by</div>
+            <div class="nft-details__author-info__author__info">
+              <img
+                [src]="nftItemData.nft.createdBy.image"
+                alt="Author"
+                class="avatar"
+              />
+              <div class="box">
+                <span class="name">{{ nftItemData.nft.createdBy.name }}</span>
+                <span class="email">{{ nftItemData.nft.createdBy.email }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="nft-details__author-info__collection">
+            <div class="title">Collection</div>
+            <div class="nft-details__author-info__collection__info">
+              <img
+                [src]="nftItemData.nft.collection.image"
+                alt="Collection"
+                class="icon"
+              />
+              <span class="name">{{ nftItemData.nft.collection.name }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="nft-details__details">
+          <h2 class="nft-details__details__title">Details</h2>
+          <span class="nft-details__details__text">
+            {{ nftItemData.nft.description }}
+          </span>
+        </div>
+        <div class="nft-details__tags" *ngFor="let tag of nftItemData.tags">
+          <span>{{ tag }}</span>
+        </div>
+        <div class="nft-details__provenance">
+          <h2 class="nft-details__provenance__title">Provenance</h2>
+          <div class="nft-details__provenance__won">
+            <div class="nft-details__provenance__won__image"></div>
+            <div class="nft-details__provenance__won__text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nft-details__container">
+      <div class="nft-details__container__wrapper">
+        <div class="nft-details__header">
+          <h2>{{ nftItemData.nft.collection.name }}</h2>
+        </div>
+        <div class="nft-details__pricing">
+          <div class="nft-details__pricing__box">
+            <div class="nft-details__pricing__box__label">Buy now</div>
+            <div class="nft-details__pricing__box__price">
+              {{ nftItemData.pricing.buyNow }}
+            </div>
+            <button
+              class="nft-details__pricing__box__button nft-details__pricing__box__button--buy"
+            >
+              BUY NOW
+            </button>
+          </div>
+          <div class="nft-details__pricing__box">
+            <div class="nft-details__pricing__box__label">Reserve</div>
+            <div class="nft-details__pricing__box__price">
+              {{ nftItemData.pricing.reserve }}
+            </div>
+            <button
+              class="nft-details__pricing__box__button nft-details__pricing__box__button--bid"
+            >
+              PLACE A BID
+            </button>
+          </div>
+          <div class="nft-details__pricing__box">
+            <div class="nft-details__pricing__box__label">Last sold</div>
+            <div class="nft-details__pricing__box__price">
+              {{ nftItemData.pricing.lastSold.amount }}
+
+              {{ nftItemData.pricing.lastSold.currency }}
+            </div>
+            <button
+              class="nft-details__pricing__box__button nft-details__pricing__box__button--offer"
+            >
+              MAKE OFFER
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

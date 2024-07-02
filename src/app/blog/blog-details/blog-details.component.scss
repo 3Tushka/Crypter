@@ -1,0 +1,92 @@
+@import "../../../assets/variables.scss";
+
+.blog-details {
+    &__wrapper {
+        width: 100%;
+    }
+
+    &__title {
+        background-image: url("../../../assets/backgrounds/bbffd1c1dbad91102c9904732022f795.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 50vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-family: $font-inter;
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 80px;
+            letter-spacing: -0.02em;
+            text-align: center;
+
+            color: $color-white;
+
+            max-width: 1200px;
+        }
+    }
+
+    &__content {
+        margin: 5rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 960px;
+
+        &__title {
+            font-family: Inter;
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 56px;
+            letter-spacing: -0.02em;
+            text-align: left;
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+
+            color: $color-gray;
+            font-family: $font-inter;
+            span {
+                //styleName: Body 1/L;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 32px;
+                letter-spacing: -0.02em;
+                text-align: left;
+            }
+
+            .text {
+                margin: 0.5rem 0;
+                //styleName: Body 2/L;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 32px;
+                letter-spacing: -0.02em;
+                text-align: left;
+            }
+        }
+    }
+
+    &__image {
+        margin: 5rem auto;
+        max-width: 1200px;
+        border-radius: 20px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+
+            border-radius: 20px;
+        }
+    }
+}
