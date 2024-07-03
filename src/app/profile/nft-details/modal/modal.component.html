@@ -1,0 +1,30 @@
+<div class="modal">
+  <div class="modal__wrapper">
+    <div class="modal__title-controll">
+      <h2 class="modal__title">Make an offer</h2>
+      <button class="modal__title-controll__close-btn" (click)="close.emit()">
+        &times;
+      </button>
+    </div>
+    <div class="modal__subtext">
+      <span>Confirm the transaction to buy <strong>NFT</strong></span>
+    </div>
+    <div class="modal__form-box">
+      <form class="modal__form">
+        <label for="price" class="price">Total offer</label>
+        <input
+          type="text"
+          id="price"
+          placeholder="0.00 ETH"
+          [(ngModel)]="offerValue"
+        />
+        <button
+          class="modal__form__button"
+          [ngClass]="{ 'black-text': offerValue }"
+        >
+          Make an offer
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

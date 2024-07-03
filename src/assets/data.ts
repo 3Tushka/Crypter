@@ -1064,11 +1064,17 @@ export const nftItemDetails = [
     ],
     pricing: {
       buyNow: 10.0,
+      currency: 'ETH',
       reserve: 0.35,
       lastSold: {
         amount: 6.05,
         currency: 'ETH',
         valueInUSD: 9256.58,
+      },
+      author: {
+        image: '../assets/images/avatars/avatar-image-3.svg',
+        name: 'Kohaku',
+        profileUrl: 'link_to_kohaku_profile',
       },
     },
     transactions: [
@@ -1080,6 +1086,7 @@ export const nftItemDetails = [
         date: 'August 18, 2022',
         time: '18:00',
         buyer: {
+          image: '../assets/images/avatars/avatar-image-1.svg',
           name: 'Random Buyer',
           profileUrl: 'link_to_buyer_profile',
         },
@@ -1089,6 +1096,8 @@ export const nftItemDetails = [
         },
       },
       {
+        author: 'Kohaku',
+        authorImage: '../assets/images/avatars/avatar-image-3.svg',
         type: 'bid',
         amount: 5.0,
         currency: 'ETH',
@@ -1096,6 +1105,8 @@ export const nftItemDetails = [
         time: '18:00',
       },
       {
+        author: '@eh5320Fx',
+        authorImage: '../assets/images/avatars/avatar-image-2.svg',
         type: 'listed',
         amount: 5.0,
         currency: 'ETH',
@@ -1103,6 +1114,8 @@ export const nftItemDetails = [
         time: '18:00',
       },
       {
+        author: 'Eleonora',
+        authorImage: '../assets/images/avatars/avatar-image-4.svg',
         type: 'minted',
         amount: 5.0,
         currency: 'ETH',
@@ -1110,10 +1123,16 @@ export const nftItemDetails = [
         time: '18:00',
       },
     ],
-    externalLinks: {
-      etherscan: 'link_to_etherscan',
-      metadata: 'link_to_metadata',
-      ipfs: 'link_to_ipfs',
-    },
+    externalLinks: [
+      {
+        image: '../assets/icons/globe.svg',
+        link: 'link_to_etherscan',
+      },
+      { image: '../assets/icons/link.svg', link: 'link_to_metadata' },
+      {
+        image: '../assets/icons/link.svg',
+        link: 'link_to_ipfs',
+      },
+    ],
   },
 ];

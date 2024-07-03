@@ -50,58 +50,159 @@
             {{ nftItemData.nft.description }}
           </span>
         </div>
-        <div class="nft-details__tags" *ngFor="let tag of nftItemData.tags">
-          <span>{{ tag }}</span>
+        <div class="nft-details__tags">
+          <ul class="nft-details__tags__externalLinks">
+            <li
+              class="nft-details__tags__externalLinks--item"
+              *ngFor="let link of nftItemData.externalLinks"
+            >
+              <a href="{{ link }}">
+                <img [src]="link.image" alt="link-image" />
+                {{ link.link }}
+              </a>
+            </li>
+          </ul>
+          <ul class="nft-details__tags__list">
+            <li
+              class="nft-details__tags__list--item"
+              *ngFor="let tag of nftItemData.tags"
+            >
+              {{ tag }}
+            </li>
+          </ul>
         </div>
-        <div class="nft-details__provenance">
-          <h2 class="nft-details__provenance__title">Provenance</h2>
-          <div class="nft-details__provenance__won">
-            <div class="nft-details__provenance__won__image"></div>
-            <div class="nft-details__provenance__won__text"></div>
+        <h2 class="nft-details__provenance-title">Provenance</h2>
+        <div
+          class="nft-details__provenance"
+          *ngFor="let transactionItem of nftItemData.transactions"
+        >
+          <div
+            class="nft-details__provenance__won"
+            *ngIf="transactionItem.type === 'sold'"
+          >
+            <div class="nft-details__provenance__won__image">
+              <img
+                [src]="transactionItem.buyer?.image"
+                [alt]="transactionItem.buyer?.name"
+              />
+            </div>
+            <div class="nft-details__provenance__won__text">
+              <div class="nft-details__provenance__won__text__won-by">
+                Auction won by
+                <strong>{{ transactionItem.buyer?.name }}</strong>
+              </div>
+              <div class="nft-details__provenance__won__text__sold-for">
+                <span> Sold for</span>
+                <span
+                  >{{ transactionItem.amount }}
+                  {{ transactionItem.currency }}</span
+                >
+                <span> ${{ transactionItem.valueInUSD }}</span>
+              </div>
+              <div class="nft-details__provenance__won__text__date">
+                {{ transactionItem.date }} at {{ transactionItem.time }}
+              </div>
+              <div class="nft-details__provenance__won__text__setteled-by">
+                Auction settled by
+                <a href="{{ transactionItem.auctioneer?.profileUrl }}"
+                  >@{{ transactionItem.auctioneer?.name }}</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="nft-details__provenance__bids"
+            *ngIf="transactionItem.type !== 'sold'"
+          >
+            <div class="nft-details__provenance__bids__entry">
+              <img
+                class="nft-details__provenance__bids__image"
+                [src]="transactionItem.authorImage"
+                alt="User Image"
+              />
+              <div class="nft-details__provenance__bids__text">
+                <div>
+                  {{ transactionItem.type }} by
+                  <strong>{{ transactionItem.author }}</strong>
+                </div>
+                <div class="date">
+                  {{ transactionItem.date }} at {{ transactionItem.time }}
+                </div>
+              </div>
+            </div>
+            <div class="nft-details__provenance__bids__amount">
+              {{ transactionItem.amount }} {{ transactionItem.currency }}
+              <img src="../../../assets/icons/export.svg" alt="exteranl-link" />
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="nft-details__container">
-      <div class="nft-details__container__wrapper">
+      <app-modal
+        *ngIf="isModalVisible"
+        (close)="isModalVisible = false"
+      ></app-modal>
+      <div class="nft-details__container__wrapper" *ngIf="!isModalVisible">
         <div class="nft-details__header">
           <h2>{{ nftItemData.nft.collection.name }}</h2>
         </div>
         <div class="nft-details__pricing">
-          <div class="nft-details__pricing__box">
-            <div class="nft-details__pricing__box__label">Buy now</div>
-            <div class="nft-details__pricing__box__price">
-              {{ nftItemData.pricing.buyNow }}
+          <div class="nft-details__pricing__wrapper">
+            <div class="nft-details__pricing__upper">
+              <div class="nft-details__pricing__box">
+                <div class="wrapper">
+                  <div class="nft-details__pricing__box__label">Buy now</div>
+                  <div class="nft-details__pricing__box__price">
+                    {{ nftItemData.pricing.buyNow }}
+                    {{ nftItemData.pricing.currency }}
+                  </div>
+                  <button
+                    class="nft-details__pricing__box__button nft-details__pricing__box__button--buy"
+                  >
+                    BUY NOW
+                  </button>
+                </div>
+              </div>
+              <div class="nft-details__pricing__box">
+                <div class="wrapper">
+                  <div class="nft-details__pricing__box__label">Reserve</div>
+                  <div class="nft-details__pricing__box__price">
+                    {{ nftItemData.pricing.reserve }}
+                    {{ nftItemData.pricing.currency }}
+                  </div>
+                  <button
+                    class="nft-details__pricing__box__button nft-details__pricing__box__button--bid"
+                  >
+                    PLACE A BID
+                  </button>
+                </div>
+              </div>
             </div>
-            <button
-              class="nft-details__pricing__box__button nft-details__pricing__box__button--buy"
-            >
-              BUY NOW
-            </button>
-          </div>
-          <div class="nft-details__pricing__box">
-            <div class="nft-details__pricing__box__label">Reserve</div>
-            <div class="nft-details__pricing__box__price">
-              {{ nftItemData.pricing.reserve }}
-            </div>
-            <button
-              class="nft-details__pricing__box__button nft-details__pricing__box__button--bid"
-            >
-              PLACE A BID
-            </button>
-          </div>
-          <div class="nft-details__pricing__box">
-            <div class="nft-details__pricing__box__label">Last sold</div>
-            <div class="nft-details__pricing__box__price">
-              {{ nftItemData.pricing.lastSold.amount }}
+            <div class="nft-details__pricing__box info-box">
+              <div class="info">
+                <div class="nft-details__pricing__box__label">Last sold</div>
+                <div class="nft-details__pricing__box__price">
+                  {{ nftItemData.pricing.lastSold.amount }}
 
-              {{ nftItemData.pricing.lastSold.currency }}
+                  {{ nftItemData.pricing.lastSold.currency }}
+                </div>
+              </div>
+              <div class="nft-details__pricing__box__author">
+                <img
+                  [src]="nftItemData.pricing.author.image"
+                  alt="author-image"
+                />
+                <p>{{ nftItemData.pricing.author.name }}</p>
+                <p>{{ nftItemData.pricing.author.profileUrl }}</p>
+              </div>
+              <button
+                class="nft-details__pricing__box__button nft-details__pricing__box__button--offer"
+                (click)="showOfferModal()"
+              >
+                MAKE OFFER
+              </button>
             </div>
-            <button
-              class="nft-details__pricing__box__button nft-details__pricing__box__button--offer"
-            >
-              MAKE OFFER
-            </button>
           </div>
         </div>
       </div>

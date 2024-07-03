@@ -1,0 +1,124 @@
+@import "../../../../assets/variables";
+
+.modal {
+    &__wrapper {
+        padding: 5rem;
+    }
+
+    &__title-controll {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__close-btn {
+            border: 1px solid $color-light-gray;
+            background-color: $color-very-light-gray;
+            border-radius: 50%;
+            font-size: 36px; /* Adjust size as needed */
+            font-weight: 400;
+            cursor: pointer;
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    &__title {
+        //styleName: h3/S;
+        font-family: Inter;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+        text-align: left;
+    }
+
+    &__subtext {
+        //styleName: body1/S;
+        //styleName: Body 2/M;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        text-align: left;
+
+        color: $color-light-gray;
+
+        strong {
+            font-weight: 600;
+            color: $color-black;
+        }
+    }
+
+    &__form-box {
+        margin-top: 10rem;
+        padding: 2rem;
+
+        background-color: $color-white;
+        border-radius: 10px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .price {
+            //styleName: Body 2/L;
+            font-family: Inter;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: -0.02em;
+            text-align: left;
+
+            color: $color-light-gray;
+        }
+
+        input {
+            //styleName: body1/S;
+            //styleName: h3/S;
+            font-family: Inter;
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+            text-align: left;
+
+            padding: 1rem 0;
+            border: none;
+            border-bottom: 1px solid $color-very-light-gray;
+
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid $color-gray;
+            }
+
+            &::placeholder {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &__button {
+            width: 100%;
+            padding: 12px 0;
+            border: 1px solid $color-light-gray;
+            color: $color-light-gray;
+            border-radius: 5px;
+            background: none;
+
+            transition: 0.2s;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $color-black;
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.black-text {
+    color: black;
+}

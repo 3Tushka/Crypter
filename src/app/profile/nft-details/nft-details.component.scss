@@ -88,4 +88,426 @@
             }
         }
     }
+
+    &__details {
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        border-bottom: 1px solid $color-very-light-gray;
+
+        &__title {
+            font-family: $font-inter;
+            font-size: $font-size-h1;
+            font-weight: $font-weight-bold;
+            line-height: $line-height-tight;
+        }
+
+        &__text {
+            //styleName: Body 2/L;
+            font-family: Inter;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: -0.02em;
+            text-align: left;
+
+            color: $color-light-gray;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 5rem;
+
+        border-bottom: 1px solid $color-very-light-gray;
+
+        &__externalLinks {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-family: $font-inter;
+            font-size: $font-size-body2;
+            font-weight: $font-weight-bold;
+            line-height: $line-height-normal;
+
+            &--item {
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+                a {
+                    text-decoration: none;
+                    color: $color-dark-gray;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    //styleName: Base/L;
+                    font-family: $font-inter;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: -0.01em;
+                    text-align: left;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            &--item {
+                padding: 0.5rem 1rem;
+                border-radius: 12px;
+                background-color: $color-very-light-gray;
+
+                font-family: $font-inter;
+                font-size: $font-size-body2;
+                font-weight: $font-weight-bold;
+                line-height: $line-height-normal;
+
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: $color-light-blue;
+                }
+            }
+        }
+    }
+
+    &__provenance-title {
+        padding: 5rem;
+
+        //styleName: h4/L;
+        font-family: Inter;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+        text-align: left;
+    }
+
+    &__provenance {
+        display: flex;
+        flex-direction: column;
+
+        padding: 1rem 5rem;
+
+        &__won {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+
+            background-color: $color-dark-white;
+            border-radius: 20px;
+
+            padding: 44px 0;
+
+            width: 100%;
+
+            &__image {
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                background-color: $color-turquoise;
+
+                img {
+                    width: 56px;
+                    height: 56px;
+                    object-fit: cover;
+                }
+            }
+
+            &__text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+
+                &__won-by {
+                    //styleName: Base/L;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: -0.01em;
+                    text-align: left;
+
+                    strong {
+                        color: $color-light-gray;
+                    }
+                }
+
+                &__sold-for {
+                    //styleName: Base/L;
+                    font-family: $font-inter;
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: -0.01em;
+                    text-align: left;
+
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    span {
+                        color: $color-light-gray;
+                    }
+
+                    span:nth-child(2) {
+                        color: $color-black;
+                    }
+                }
+
+                &__date {
+                    //styleName: Base/L;
+                    font-family: $font-inter;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: -0.01em;
+                    text-align: left;
+
+                    color: $color-light-gray;
+                }
+
+                &__setteled-by {
+                    border-radius: 10px;
+                    background-color: $color-white;
+                    padding: 12px 24px;
+
+                    //styleName: Base/L;
+                    font-family: $font-inter;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: -0.01em;
+
+                    color: $color-light-gray;
+
+                    box-shadow:
+                        rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+                        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+                    a {
+                        color: $color-black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        &__bids {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 1rem;
+
+            padding: 2rem 0;
+
+            border-top: 1px solid $color-very-light-gray;
+
+            &__entry {
+                display: flex;
+                align-items: center;
+                flex: 0 0 1;
+                gap: 1rem;
+            }
+
+            &__image {
+                width: 48px;
+                height: 48px;
+                background-color: $color-yellow;
+                border-radius: 50%;
+
+                img {
+                    width: 48px;
+                    height: 48px;
+                    object-fit: cover;
+                }
+            }
+
+            &__text {
+                text-transform: capitalize;
+                //styleName: Base/L;
+                font-family: Inter;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: -0.01em;
+                text-align: left;
+
+                strong {
+                    color: $color-light-gray;
+                }
+
+                .date {
+                    font-weight: 400;
+                    color: $color-light-gray;
+                }
+            }
+
+            &__amount {
+                //styleName: Base/L;
+                //styleName: Body 2 (Bold)/L;
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 32px;
+                letter-spacing: -0.02em;
+                text-align: right;
+
+                color: $color-black;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                    object-fit: cover;
+                }
+            }
+
+            transition: 0.2s ease-in;
+            &:hover {
+                cursor: pointer;
+                background-color: $color-very-light-gray;
+                padding: 2rem 1rem;
+            }
+        }
+    }
+
+    &__header {
+        padding: 5rem;
+
+        h2 {
+            //styleName: h2/L;
+            font-family: Inter;
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 64px;
+            letter-spacing: -0.02em;
+            text-align: left;
+        }
+    }
+
+    &__pricing {
+        padding: 5rem;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            background-color: $color-white;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 640px;
+            padding: 32px;
+        }
+
+        &__upper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &__box {
+            width: 100%;
+            &__label {
+                //styleName: Title/L;
+                font-family: Inter;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 36px;
+                letter-spacing: -0.01em;
+                text-align: left;
+
+                color: $color-light-gray;
+            }
+
+            &__price {
+                display: flex;
+                align-items: center;
+                //styleName: h4/L;
+                font-family: Inter;
+                font-size: 32px;
+                font-weight: 800;
+                line-height: 40px;
+                letter-spacing: -0.02em;
+                text-align: left;
+            }
+
+            &__button {
+                width: 80%;
+                max-width: 255px;
+                padding: 12px 0;
+                border: 1px solid $color-light-gray;
+                color: $color-light-gray;
+                border-radius: 5px;
+                background: none;
+
+                transition: 0.2s;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $color-black;
+                    color: $color-white;
+                }
+
+                &--offer {
+                    max-width: 144px;
+                    height: 48px;
+                }
+            }
+
+            &__author {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                img {
+                    width: 48px;
+                    height: 48px;
+                    object-fit: cover;
+                }
+
+                &__name {
+                    //styleName: Base/L;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: -0.01em;
+                    text-align: left;
+
+                    color: $color-light-gray;
+                }
+            }
+        }
+
+        .info-box {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+    }
 }

@@ -11,4 +11,10 @@ export class NftDetailsComponent {
   constructor() {}
 
   nftDetailsData = nftItemDetails;
+
+  isModalVisible: boolean = false;
+
+  showOfferModal(): void {
+    this.isModalVisible = true;
+  }
 }

@@ -41,6 +41,7 @@ import { CategoryDetailComponent } from './help-center/category-detail/category-
 import { BlogComponent } from './blog/blog/blog.component';
 import { BlogDetailsComponent } from './blog/blog-details/blog-details.component';
 import { NftDetailsComponent } from './profile/nft-details/nft-details.component';
+import { ModalComponent } from './profile/nft-details/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { NftDetailsComponent } from './profile/nft-details/nft-details.component
     BlogComponent,
     BlogDetailsComponent,
     NftDetailsComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
