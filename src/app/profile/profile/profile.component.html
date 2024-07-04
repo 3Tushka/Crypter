@@ -1,24 +1,24 @@
-<section class="profile" *ngFor="let user of usersData">
+<section class="profile" *ngFor="let userItem of usersData">
   <app-navbar></app-navbar>
-  <div class="profile-wrapper">
+  <div class="profile-wrapper" *ngIf="auth.user$ | async as user">
     <section class="profile-info">
       <figure class="profile-avatar">
-        <img [src]="user.avatar" alt="User's avatar" />
+        <img [src]="user.picture" alt="User's avatar" />
       </figure>
       <header class="profile-header">
-        <h1>{{ user.username }}</h1>
+        <h1>{{ user.nickname }}</h1>
         <button class="profile-follow-btn">Follow +</button>
       </header>
       <address class="profile-contact-mail">
         <p>{{ user.email }}</p>
         <p class="address">
-          {{ user.address }}
+          {{ userItem.address }}
           <img src="../../../assets/icons/copy.svg" alt="copy" />
         </p>
       </address>
       <section class="profile-main-data">
         <article class="profile-item">
-          <p>{{ user.total_sales }}</p>
+          <p>{{ userItem.total_sales }}</p>
           <figure class="icon">
             <img
               src="../../../assets/icons/profile.svg"
@@ -28,14 +28,14 @@
           </figure>
         </article>
         <article class="profile-item">
-          <p>{{ user.following }}</p>
+          <p>{{ userItem.following }}</p>
           <figure class="icon">
             <img src="../../../assets/icons/profile.svg" alt="Following icon" />
             <figcaption>Following</figcaption>
           </figure>
         </article>
         <button class="profile-item" (click)="showComponent('nft-followers')">
-          <p>{{ user.followers }}</p>
+          <p>{{ userItem.followers }}</p>
           <figure class="icon">
             <img src="../../../assets/icons/profile.svg" alt="Followers icon" />
             <figcaption>Followers</figcaption>
@@ -46,20 +46,20 @@
         <article class="profile-box">
           <section class="profile-bio">
             <h6>Bio</h6>
-            <p>{{ user.bio }}</p>
+            <p>{{ userItem.bio }}</p>
           </section>
           <nav class="profile-links">
             <h4>Links:</h4>
             <div class="profile-links-website">
               <a href="">
                 <img src="../../../assets/icons/country.svg" alt="country" />
-                {{ user.links.website }}
+                {{ userItem.links.website }}
               </a>
             </div>
             <div class="profile-links-mirror">
               <a href="">
                 <img src="../../../assets/icons/link.svg" alt="link" />
-                {{ user.links.mirror }}</a
+                {{ userItem.links.mirror }}</a
               >
             </div>
           </nav>

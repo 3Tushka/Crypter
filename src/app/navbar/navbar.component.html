@@ -21,7 +21,7 @@
       Connect Wallet
     </button>
     <div class="navbar__userbox">
-      <div class="navbar__userbox__notification">
+      <div class="navbar__userbox__notification" (click)="login()">
         <svg
           width="24"
           height="24"
@@ -57,15 +57,11 @@
 </nav>
 
 <div class="navbar-dropdown-content dropdown" *ngIf="dropdownOpen">
-  <div class="dropdown-header">
-    <img
-      src="../../assets/images/avatars/avatar-image-1.svg"
-      alt="user avatar"
-      class="user-avatar"
-    />
+  <div class="dropdown-header" *ngIf="auth.user$ | async as user">
+    <img [src]="user.picture" alt="user avatar" class="user-avatar" />
     <div class="dropdown-header__user-info">
-      <h2>Dash</h2>
-      <p>@randomdash</p>
+      <h2>{{ user.nickname }}</h2>
+      <p>{{ user.email }}</p>
     </div>
     <button (click)="toggleDropdown()" class="close-btn">X</button>
   </div>

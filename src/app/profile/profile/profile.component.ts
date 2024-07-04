@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 import { profileCollection, users } from 'src/assets/data';
 
 @Component({
@@ -13,7 +14,7 @@ export class ProfileComponent implements OnInit {
   changeBackgroundColor = false;
   backgroundColor = ''; // default background color
 
-  constructor() {}
+  constructor(public auth: AuthService) {}
 
   usersData = users;
   userCollection = profileCollection;

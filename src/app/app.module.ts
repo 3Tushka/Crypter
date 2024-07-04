@@ -42,6 +42,8 @@ import { BlogComponent } from './blog/blog/blog.component';
 import { BlogDetailsComponent } from './blog/blog-details/blog-details.component';
 import { NftDetailsComponent } from './profile/nft-details/nft-details.component';
 import { ModalComponent } from './profile/nft-details/modal/modal.component';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment } from './environment/environment';
 
 @NgModule({
   declarations: [
@@ -89,6 +91,13 @@ import { ModalComponent } from './profile/nft-details/modal/modal.component';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
+    AuthModule.forRoot({
+      domain: environment.auth.domain,
+      clientId: environment.auth.clientId,
+      authorizationParams: {
+        redirect_uri: window.location.origin,
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
