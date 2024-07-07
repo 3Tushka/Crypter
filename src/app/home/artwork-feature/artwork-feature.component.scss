@@ -147,7 +147,7 @@
 
         .button-feature {
             width: 45%;
-
+            border-radius: 5px;
             padding: 1rem 2rem;
             background: none;
             border: 2px solid $color-black;
@@ -162,6 +162,67 @@
                 cursor: pointer;
                 background-color: $color-black;
                 color: $color-white;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .artwork-feature {
+        margin: 0;
+
+        .collection {
+            flex-direction: column;
+
+            .collection-image {
+                width: 100%;
+                max-height: 100%;
+            }
+
+            .collection-box {
+                padding: 3rem 0;
+            }
+
+            .collection-info {
+                max-width: 100%;
+                margin: 0 24px 2rem;
+                height: auto;
+                padding: 12px 0;
+
+                justify-content: space-evenly;
+
+                &__title {
+                    gap: 0;
+
+                    h4 {
+                        margin: 0;
+                    }
+                }
+
+                &__title:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .collection-controll-panel {
+        margin: 0 1.5rem;
+        &__title {
+            justify-content: center;
+            align-items: center;
+            h1 {
+                font-size: 48px;
+                line-height: 48px;
+            }
+        }
+        .controll-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 1rem;
+
+            .button-feature {
+                width: 100%;
             }
         }
     }

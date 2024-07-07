@@ -14,6 +14,7 @@ import { CategoryDetailComponent } from './help-center/category-detail/category-
 import { BlogComponent } from './blog/blog/blog.component';
 import { BlogDetailsComponent } from './blog/blog-details/blog-details.component';
 import { NftDetailsComponent } from './profile/nft-details/nft-details.component';
+import { FeedComponent } from './feed/feed.component';
 
 const routes: Routes = [
   {
@@ -65,6 +66,7 @@ const routes: Routes = [
 
   { path: 'blog', component: BlogComponent },
   { path: 'blog/:blogName', component: BlogDetailsComponent },
+  { path: 'feed', component: FeedComponent },
 ];
 
 @NgModule({

@@ -9,6 +9,7 @@
         font-family: $font-inter;
         font-size: 5rem;
         font-weight: $font-weight-bold;
+        line-height: 5rem;
 
         margin: 1rem 0 5rem;
     }
@@ -132,6 +133,45 @@
             font-weight: $font-weight-bold;
             line-height: $line-height-normal;
             color: $color-black;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .grid-container {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-image {
+        height: 300px;
+    }
+
+    .thumbnail-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .swiper-slide {
+        max-width: 100%;
+    }
+
+    .swiper-container {
+        margin: 0 0.5rem 0 0;
+    }
+
+    .curated-collections {
+        padding: 2rem 1rem;
+
+        h1 {
+            font-size: 3rem;
+            line-height: 3rem;
+            margin: 1rem 0 3rem;
         }
     }
 }

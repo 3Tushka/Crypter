@@ -98,3 +98,31 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 2rem;
+
+        .header-title {
+            padding: 0 2rem;
+            flex-direction: column;
+
+            h1 {
+                font-size: 64px;
+                line-height: 64px;
+            }
+
+            .arrow-button {
+                width: 128px;
+                max-height: 32px;
+
+                .arrow-icon {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}

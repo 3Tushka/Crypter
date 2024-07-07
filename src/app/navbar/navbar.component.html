@@ -16,12 +16,12 @@
   </div>
   <div class="navbar-links">
     <a routerLink="/discover">Discover</a>
-    <a routerLink="/feed">Feed</a>
+    <a routerLink="/feed" (click)="login()">Feed</a>
     <button class="connect-wallet button" (click)="goToWalletPage()">
       Connect Wallet
     </button>
-    <div class="navbar__userbox">
-      <div class="navbar__userbox__notification" (click)="login()">
+    <div class="navbar__userbox" *ngIf="auth.user$ | async as user">
+      <div class="navbar__userbox__notification">
         <svg
           width="24"
           height="24"
@@ -39,11 +39,8 @@
         </svg>
       </div>
       <div class="navbar__userbox__user">
-        <button class="navbar__dropdown" (click)="toggleDropdown()">
-          <img
-            src="../../assets/images/avatars/avatar-image-1 .svg"
-            alt="avatar"
-          />
+        <button class="navbar__userbox__dropdown" (click)="toggleDropdown()">
+          <img [src]="user.picture" alt="avatar" />
         </button>
       </div>
     </div>

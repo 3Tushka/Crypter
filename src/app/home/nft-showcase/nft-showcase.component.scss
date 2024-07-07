@@ -73,11 +73,13 @@
             margin-top: 5rem;
 
             &-title {
-                font-size: $font-size-body2;
-                font-weight: $font-weight-bold;
-                color: $color-light-gray;
-                font-family: $font-inter;
-                margin-bottom: 0.6rem;
+                h4 {
+                    font-size: $font-size-body2;
+                    font-weight: $font-weight-bold;
+                    color: $color-light-gray;
+                    font-family: $font-inter;
+                    margin-bottom: 1rem;
+                }
             }
 
             &-content {
@@ -89,10 +91,12 @@
             }
 
             &-price {
-                font-size: 48px;
-                font-weight: $font-weight-bold;
-                color: $color-white;
-                font-family: $font-inter;
+                h3 {
+                    font-size: 48px;
+                    font-weight: $font-weight-bold;
+                    color: $color-white;
+                    font-family: $font-inter;
+                }
             }
 
             &-offer {
@@ -139,5 +143,55 @@
 
     &-image {
         animation: heartbeat 5s infinite;
+    }
+}
+
+@media (max-width: 768px) {
+    .nft-showcase {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+
+        .nft-showcase-info {
+            &-artist {
+                font-size: 18px;
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .nft-showcase-info-priceBox {
+                margin-top: 1rem;
+
+                &-title {
+                    h4 {
+                        font-size: 20px;
+                    }
+                }
+
+                &-content {
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 0;
+                }
+
+                &-offer {
+                    margin-top: 1rem;
+                    width: 100%;
+                }
+            }
+        }
+
+        .nft-showcase-image {
+            width: 100%;
+            max-width: 425px;
+
+            display: flex;
+            justify-content: center;
+            img {
+                width: 100%;
+
+                height: auto;
+                object-fit: cover;
+            }
+        }
     }
 }

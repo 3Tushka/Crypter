@@ -44,6 +44,8 @@ import { NftDetailsComponent } from './profile/nft-details/nft-details.component
 import { ModalComponent } from './profile/nft-details/modal/modal.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment } from './environment/environment';
+import { HttpClientModule } from '@angular/common/http';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -82,8 +84,10 @@ import { environment } from './environment/environment';
     BlogDetailsComponent,
     NftDetailsComponent,
     ModalComponent,
+    FeedComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

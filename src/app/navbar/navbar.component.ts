@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '@auth0/auth0-angular';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,8 @@ export class NavbarComponent implements AfterViewInit {
     private router: Router,
     private elementRef: ElementRef,
     private renderer: Renderer2,
-    public auth: AuthService
+    public auth: AuthService,
+    public api: ApiService
   ) {}
 
   walletInfo = {
@@ -28,7 +30,12 @@ export class NavbarComponent implements AfterViewInit {
     this.auth.loginWithRedirect();
   }
 
+  logout(): void {
+    this.auth.logout();
+  }
+
   ngAfterViewInit() {
+    this.api.getData();
     const navbar = this.elementRef.nativeElement;
     const parentElement = this.renderer.parentNode(navbar);
     const parentStyle = window.getComputedStyle(parentElement);
