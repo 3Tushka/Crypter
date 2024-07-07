@@ -220,3 +220,45 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .help-category {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__header {
+            max-width: none;
+
+            &__wrapper {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                //styleName: h3/M;
+                font-family: Inter;
+                font-size: 40px;
+                font-weight: 800;
+                line-height: 48px;
+                letter-spacing: -0.02em;
+                text-align: left;
+            }
+
+            button {
+                max-width: 60px;
+                height: 60px;
+                padding: 18px;
+
+                font-size: 18px;
+            }
+        }
+
+        &__content {
+            max-width: none;
+
+            &__wrapper {
+                padding: 2rem 1.5rem;
+            }
+        }
+    }
+}

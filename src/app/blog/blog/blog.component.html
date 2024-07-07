@@ -1,5 +1,5 @@
 <div class="blog">
-  <app-navbar></app-navbar>
+  <!-- <app-navbar></app-navbar> -->
   <div class="blog__wrapper">
     <div *ngFor="let blogPost of blogPosts">
       <div class="blog__title">
@@ -7,7 +7,7 @@
         <nav class="blog__navbar">
           <ul class="blog__list">
             <li class="blog__list__item">
-              {{ blogPost.subtitle }}
+              <span> {{ blogPost.subtitle }}</span>
             </li>
           </ul>
         </nav>

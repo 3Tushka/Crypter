@@ -174,3 +174,60 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .help {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__info {
+            max-width: none;
+
+            &__header {
+                padding: 0;
+
+                h1 {
+                    font-size: 48px;
+                    font-weight: 800;
+                    line-height: 48px;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+                    padding: 2rem 1.5rem 0;
+                }
+
+                p {
+                    padding: 0 1.5rem;
+                }
+            }
+
+            &__search {
+                padding: 2rem 1.5rem;
+
+                input {
+                    font-size: 16px;
+
+                    &::placeholder {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        &__content {
+            max-width: none;
+
+            &__item {
+                padding: 2rem 1.5rem;
+                flex-direction: column;
+
+                &__img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

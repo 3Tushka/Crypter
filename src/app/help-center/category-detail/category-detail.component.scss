@@ -96,3 +96,30 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .category-detail {
+        &__title {
+            h1 {
+                max-width: none;
+
+                font-size: 48px;
+                font-weight: 800;
+                line-height: 48px;
+                letter-spacing: -0.02em;
+                text-align: center;
+            }
+        }
+
+        &__content {
+            flex-direction: column;
+            margin: 2rem 1.5rem;
+
+            gap: 2rem;
+
+            &__title {
+                font-size: 32px;
+            }
+        }
+    }
+}
