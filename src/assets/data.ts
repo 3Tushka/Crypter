@@ -1136,3 +1136,74 @@ export const nftItemDetails = [
     ],
   },
 ];
+
+export const feedCollections = [
+  {
+    image: '../assets/images/users/feed/0a6f67514484816dcdd445b069014144.jpg',
+    collection: 'Escape',
+    collectionImage: '../assets/images/spotlight/Frame-1.png',
+    avatar: '../assets/images/avatars/avatar-image-1.svg',
+    email: '@randomash',
+  },
+
+  {
+    image: '../assets/images/users/feed/5a7cb4c4e7705a89d4b77f085bf2e1a5.png',
+    collection: 'Escape',
+    collectionImage: '../assets/images/spotlight/Frame-1.png',
+    avatar: '../assets/images/avatars/avatar-image-1.svg',
+    email: '@randomash',
+  },
+
+  {
+    image: '../assets/images/users/feed/ad646e91333beb81ad2cfdb172518df6.png',
+    collection: 'Escape',
+    collectionImage: '../assets/images/spotlight/Frame-1.png',
+    avatar: '../assets/images/avatars/avatar-image-1.svg',
+    email: '@randomash',
+  },
+
+  {
+    image: '../assets/images/users/feed/e51aebd8cd69f9167292b3a0b0b00029.png',
+    collection: 'Escape',
+    collectionImage: '../assets/images/spotlight/Frame-1.png',
+    avatar: '../assets/images/avatars/avatar-image-1.svg',
+    email: '@randomash',
+  },
+];
+
+export const feedCreators = [
+  {
+    avatar: '../assets/images/avatars/avatar-image-1.svg',
+    username: 'Dash',
+    email: '@dash',
+    price: '12.29 ETH',
+  },
+
+  {
+    avatar: '../assets/images/avatars/avatar-image-2.svg',
+    username: 'Dash',
+    email: '@randomdash',
+    price: '12.29 ETH',
+  },
+
+  {
+    avatar: '../assets/images/avatars/avatar-image-3.svg',
+    username: 'Dash',
+    email: '@randomdash',
+    price: '12.29 ETH',
+  },
+
+  {
+    avatar: '../assets/images/avatars/avatar-image-4.svg',
+    username: 'Dash',
+    email: '@randomdash',
+    price: '12.29 ETH',
+  },
+
+  {
+    avatar: '../assets/images/avatars/avatar-image-5.svg',
+    username: 'Dash',
+    email: '@randomdash',
+    price: '12.29 ETH',
+  },
+];

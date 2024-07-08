@@ -46,6 +46,7 @@ import { AuthModule } from '@auth0/auth0-angular';
 import { environment } from './environment/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { FeedComponent } from './feed/feed.component';
+import { TopCreatorsAndCollectorsComponent } from './feed/top-creators-and-collectors/top-creators-and-collectors.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { FeedComponent } from './feed/feed.component';
     NftDetailsComponent,
     ModalComponent,
     FeedComponent,
+    TopCreatorsAndCollectorsComponent,
   ],
   imports: [
     HttpClientModule,
