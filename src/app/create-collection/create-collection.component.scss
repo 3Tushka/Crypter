@@ -19,13 +19,15 @@
         width: 100%;
         max-width: 50vw;
 
-        padding: 5rem 4rem;
+        &__wrapper {
+            padding: 5rem 4rem;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-        gap: 2.5rem;
+            gap: 2.5rem;
+        }
     }
 
     &__box {
@@ -309,6 +311,43 @@
         }
     }
 
+    .preview-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .preview-image {
+        width: 80%;
+        height: 60vh;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f9f9f9;
+
+        cursor: pointer;
+    }
+    .custom-file-upload {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 24px;
+        font-weight: 600;
+        color: $color-gray;
+    }
+
+    .image-preview {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     .congratulatory-section {
         width: 100%;
         height: auto;
@@ -342,6 +381,15 @@
                     width: 100%;
                     height: auto;
                     object-fit: cover; // Ensures the image covers the area without distortion
+                }
+
+                input {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    background-color: none;
                 }
             }
 
@@ -391,6 +439,124 @@
 
                 .share {
                     background-color: #008cba; // Blue color for share
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .collection {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__create-list {
+            flex-direction: column;
+        }
+
+        &__container {
+            max-width: none;
+
+            &__wrapper {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        &__title {
+            h1 {
+                font-size: 48px;
+                line-height: 48px;
+            }
+        }
+
+        &__button {
+            max-width: 90%;
+
+            .create-button {
+                max-width: none;
+            }
+        }
+
+        &__text {
+            p {
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+
+        &__header {
+            h2 {
+                font-size: 20px;
+            }
+
+            &__count {
+                font-size: 20px;
+            }
+        }
+
+        &__create-collection {
+            flex-direction: column;
+        }
+
+        &__header {
+            h2 {
+                font-size: 48px;
+                line-height: 48px;
+            }
+        }
+
+        &__return-btn {
+            padding: 5px;
+            width: 100%;
+            max-width: 40px;
+            height: 40px;
+        }
+
+        .form-section {
+            .form-group {
+                label {
+                    font-size: 0.7rem;
+                }
+
+                input[type="text"] {
+                    &::placeholder {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            .continue-button {
+                margin-top: 2rem;
+            }
+        }
+
+        .preview-section {
+            margin: 2rem 0;
+        }
+
+        .congratulatory-section {
+            margin: 0;
+
+            .collection__container {
+                width: 100%;
+                height: auto;
+                max-width: fit-content;
+                padding: 2rem 1.5rem 0;
+            }
+
+            .preview {
+                &__image {
+                    display: none;
+                }
+
+                &__details {
+                    top: 0;
+                    margin-bottom: 0;
+
+                    h1 {
+                        font-size: 32px;
+                    }
                 }
             }
         }

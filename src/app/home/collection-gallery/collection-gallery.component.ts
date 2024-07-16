@@ -1,7 +1,6 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { initializeCarousel } from 'src/app/functions';
 import { collectionGallery } from 'src/assets/data';
-
-import Swiper from 'swiper';
 
 @Component({
   selector: 'app-collection-gallery',
@@ -11,18 +10,11 @@ import Swiper from 'swiper';
 export class CollectionGalleryComponent implements AfterViewInit {
   collectionGalleryItems = collectionGallery;
 
+  @ViewChild('gallery') tabsContainer!: ElementRef;
+  @ViewChild('nextArrow') nextArrow!: ElementRef;
+  @ViewChild('prevArrow') prevArrow!: ElementRef;
+
   ngAfterViewInit() {
-    const swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      pagination: { clickable: true },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 1000,
-      },
-      loop: true,
-    });
+    initializeCarousel(this.tabsContainer, this.nextArrow, this.prevArrow);
   }
 }

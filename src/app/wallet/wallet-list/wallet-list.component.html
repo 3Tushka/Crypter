@@ -16,48 +16,75 @@
     </div>
   </article>
   <div class="wallet-control">
-    <div class="wallet-control-exit">
-      <div class="wallet-control-exit-icon">
-        <i class="fas fa-times" (click)="goToMainPage()">
-          <img src="../../../assets/icons/close.svg" alt="close" />
-        </i>
-      </div>
-    </div>
-    <div class="control-box">
-      <div class="control-box-title">
-        <h2>Choose the wallet.</h2>
-      </div>
-      <div class="wallet-selector">
-        <div class="tabs">
-          <button
-            class="tabs-button"
-            *ngFor="let network of networks"
-            [class.selected]="selectedNetwork === network"
-            (click)="selectNetwork(network)"
+    <div class="wallet-control__wrapper">
+      <div class="wallet-control-exit">
+        <div class="wallet-control-exit-icon">
+          <i
+            class="fas fa-times"
+            (click)="goToMainPage()"
+            *ngIf="!toggleQrCodeScan"
           >
-            {{ network }}
+            <img src="../../../assets/icons/close.svg" alt="close" />
+          </i>
+          <i
+            class="fas fa-times"
+            (click)="toggleQrCode()"
+            *ngIf="toggleQrCodeScan"
+          >
+            <img src="../../../assets/icons/close.svg" alt="close" />
+          </i>
+        </div>
+      </div>
+      <div class="control-box" *ngIf="!toggleQrCodeScan">
+        <div class="control-box-title">
+          <h2>Choose the wallet.</h2>
+        </div>
+        <div class="wallet-selector">
+          <div class="tabs" #tabsContainer>
+            <button
+              class="tabs-button"
+              *ngFor="let network of networks"
+              [class.selected]="selectedNetwork === network"
+              (click)="selectNetwork(network)"
+            >
+              {{ network }}
+            </button>
+          </div>
+
+          <ul class="wallet-list">
+            <li
+              class="wallet-list-item"
+              *ngFor="let wallet of wallets"
+              [class.selected]="selectedWallet === wallet.name"
+              (click)="selectWallet(wallet)"
+            >
+              <img [src]="wallet.icon" [alt]="wallet.name" />
+              <span> {{ wallet.name }}</span>
+            </li>
+          </ul>
+
+          <button class="scan-to-connect" (click)="toggleQrCode()">
+            <img
+              [src]="'../../../assets/icons/header-research-button.svg'"
+              alt="Connect"
+            />
+            <span>Scan to connect</span>
           </button>
         </div>
-
-        <ul class="wallet-list">
-          <li
-            class="wallet-list-item"
-            *ngFor="let wallet of wallets"
-            [class.selected]="selectedWallet === wallet.name"
-            (click)="selectWallet(wallet)"
-          >
-            <img [src]="wallet.icon" [alt]="wallet.name" />
-            <span> {{ wallet.name }}</span>
-          </li>
-        </ul>
-
-        <button class="scan-to-connect">
-          <img
-            [src]="'../../../assets/icons/header-research-button.svg'"
-            alt="Connect"
-          />
-          <span>Scan to connect</span>
-        </button>
+      </div>
+      <div class="control-box" *ngIf="toggleQrCodeScan">
+        <div class="control-box-title">
+          <h2>Scan to connect.</h2>
+        </div>
+        <div class="wallet-selector">
+          <div class="wallet-selector__qr">
+            <img src="../../../assets/images/barcode-qr.svg" alt="barcode-qr" />
+          </div>
+          <div class="wallet-selector__title">
+            <span>Powered by Ui8</span>
+            <a href="">Dont have a wallet app?</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

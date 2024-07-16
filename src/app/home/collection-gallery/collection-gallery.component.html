@@ -1,39 +1,34 @@
 <div class="curated-collections">
   <h1>Curated Collections.</h1>
-  <div class="swiper-container">
-    <div class="gallery swiper-wrapper">
-      <div
-        class="card swiper-slide"
-        *ngFor="let collectionItem of collectionGalleryItems"
-      >
-        <div class="grid-container">
-          <div class="main-image">
-            <img
-              [src]="collectionItem.image[0]"
-              [alt]="collectionItem.collectionName"
-            />
-          </div>
-          <div class="thumbnail-container">
-            <img
-              *ngFor="let imageItem of collectionItem.image.slice(1, 3)"
-              [src]="imageItem"
-              [alt]="collectionItem.collectionName"
-            />
-            <div class="more-items" *ngIf="collectionItem.image.length > 3">
-              +{{ collectionItem.image.length - 3 }}
-            </div>
+  <div class="gallery" #gallery>
+    <div class="card" *ngFor="let collectionItem of collectionGalleryItems">
+      <div class="grid-container">
+        <div class="main-image">
+          <img
+            [src]="collectionItem.image[0]"
+            [alt]="collectionItem.collectionName"
+          />
+        </div>
+        <div class="thumbnail-container">
+          <img
+            *ngFor="let imageItem of collectionItem.image.slice(1, 3)"
+            [src]="imageItem"
+            [alt]="collectionItem.collectionName"
+          />
+          <div class="more-items" *ngIf="collectionItem.image.length > 3">
+            +{{ collectionItem.image.length - 3 }}
           </div>
         </div>
-        <div class="card-info">
-          <h3>{{ collectionItem.collectionName }}</h3>
-          <div class="card-info-box">
-            <div class="card-info-box-user">
-              <img [src]="collectionItem.avatar" alt="avatar" />
-              <span>{{ collectionItem.username }}</span>
-            </div>
-            <div class="card-info-box-price">
-              <span>{{ collectionItem.price }}</span>
-            </div>
+      </div>
+      <div class="card-info">
+        <h3>{{ collectionItem.collectionName }}</h3>
+        <div class="card-info-box">
+          <div class="card-info-box-user">
+            <img [src]="collectionItem.avatar" alt="avatar" />
+            <span>{{ collectionItem.username }}</span>
+          </div>
+          <div class="card-info-box-price">
+            <span>{{ collectionItem.price }}</span>
           </div>
         </div>
       </div>

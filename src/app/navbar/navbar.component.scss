@@ -375,3 +375,35 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+
+        .navbar-info {
+            width: 100%;
+
+            padding: 1rem 0;
+            border-right: none;
+
+            .navbar-search {
+                display: none;
+            }
+        }
+
+        .navbar-links {
+            padding: 0;
+
+            display: flex;
+            justify-content: flex-end;
+
+            a {
+                display: none;
+            }
+
+            .connect-wallet {
+                display: none;
+            }
+        }
+    }
+}

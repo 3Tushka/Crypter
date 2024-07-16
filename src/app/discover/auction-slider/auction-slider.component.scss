@@ -1,4 +1,3 @@
-/* Slide */
 @import "../../../assets/variables";
 
 .slider {
@@ -8,13 +7,11 @@
 }
 .slide {
     position: relative;
-    width: 100%; // Adjust as needed
-
-    // Control buttons container
+    width: 100%;
     &__controll {
         position: absolute;
-        top: 5rem; // Adjust as needed
-        right: 5rem; // Adjust as needed
+        top: 5rem;
+        right: 5rem;
         z-index: 10;
 
         display: flex;
@@ -22,17 +19,17 @@
         gap: 1rem;
 
         &--btn {
-            background-color: #fff; // Button background color
+            background-color: #fff;
             border: none;
             cursor: pointer;
             width: 60px;
             height: 60px;
-            font-size: 24px; // Adjust as needed
-            border-radius: 100%; // Circular buttons
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); // Optional: adds shadow for depth
+            font-size: 24px;
+            border-radius: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
             &:hover {
-                background-color: #f0f0f0; // Button hover background color
+                background-color: #f0f0f0;
             }
         }
     }
@@ -68,9 +65,8 @@
             justify-content: space-between;
             align-items: center;
             gap: 2rem;
-            // background-color: #2020257d; // User info background color
 
-            color: $color-white; // Text color
+            color: $color-white;
 
             &--title {
                 //styleName: h1/L;
@@ -135,13 +131,13 @@
         padding: 1.75rem 2.5rem;
         display: flex;
         flex-direction: column;
-        background-color: $color-white; // Slide background color
+        background-color: $color-white;
 
         border-radius: 24px;
     }
 
     &__userdata {
-        background-color: #2020257d; // User info background color
+        background-color: #2020257d;
     }
 
     &__timer {

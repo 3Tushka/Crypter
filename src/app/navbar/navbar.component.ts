@@ -68,6 +68,10 @@ export class NavbarComponent implements AfterViewInit {
     this.router.navigate(['/wallet']);
   }
 
+  goToMainMenu() {
+    this.router.navigate(['/main-menu']);
+  }
+
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }

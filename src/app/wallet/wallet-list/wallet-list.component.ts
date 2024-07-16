@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { initializeCarousel } from 'src/app/functions';
 
 interface Wallet {
   name: string;
@@ -27,12 +28,26 @@ export class WalletListComponent {
   selectedNetwork = 'Ethereum';
   selectedWallet = '';
 
+  toggleQrCodeScan: boolean = false;
+
+  @ViewChild('tabsContainer') tabsContainer!: ElementRef;
+  @ViewChild('nextArrow') nextArrow!: ElementRef;
+  @ViewChild('prevArrow') prevArrow!: ElementRef;
+
+  ngAfterViewInit() {
+    initializeCarousel(this.tabsContainer, this.nextArrow, this.prevArrow);
+  }
+
   selectNetwork(network: string) {
     this.selectedNetwork = network;
   }
 
   selectWallet(wallet: Wallet) {
     this.selectedWallet = wallet.name;
+  }
+
+  toggleQrCode() {
+    this.toggleQrCodeScan = !this.toggleQrCodeScan;
   }
 
   goToMainPage() {
